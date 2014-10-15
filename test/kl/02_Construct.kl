@@ -1,0 +1,7 @@
+require RazerHydra;
+
+operator entry() {
+  RazerHydraController controller();
+  controller = null;
+  report('completed!'); 
+}
