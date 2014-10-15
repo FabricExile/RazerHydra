@@ -27,14 +27,14 @@ building
 ========
 
 A scons (http://www.scons.org/) build script is provided. RazerHydra depends on
-* The Razer Hydra SDK 
+* The Sixense Core SDK (062612 or higher)
 * A static build of boost (1.55.0 or higher)
 
 To inform scons where to find the Fabric Engine includes as well as the thirdparty libraries, you need to set the following environment variables:
 
 * FABRIC_DIR: Should point to Fabric Engine's installation folder.
-* SIXENSE_INCLUDE_DIR: Should point to the include folder of the RazerHydra SDK.
-* SIXENSE_LIBRARY_DIR: Should point to the library folder of the RazerHydra SDK.
+* SIXENSE_INCLUDE_DIR: Should point to the include folder of the Sixense Core SDK.
+* SIXENSE_LIBRARY_DIR: Should point to the library folder of the Sixense Core SDK.
 * BOOST_INCLUDE_DIR: Should point to Boost include folder.
 * BOOST_LIBRARY_DIR: Should point to Boost library folder.
 

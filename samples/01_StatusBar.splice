@@ -1,0 +1,59 @@
+{
+  "version": "1013001",
+  "info": {
+    "hostAppName": "Splice Standalone",
+    "hostAppVersion": "1.0"
+  },
+  "nodes": [
+    {
+      "name": "DGNode",
+      "dependencies": {},
+      "bindings": [
+        {
+          "operator": {
+            "name": "hydraOp",
+            "entry": "hydraOp",
+            "filename": "hydraOp.kl",
+            "kl": "require InlineDrawing;\nrequire RazerHydra;\nrequire SpliceStandalone;\nrequire Singletons;\n\noperator hydraOp(io DrawingHandle handle, io RazerHydraController hydra, in Scalar time)\n{\n  queueStatusMessage('[StatusBar]', 'A new message for the status bar, time is '+time);\n}\n",
+            "portmap": {}
+          }
+        }
+      ]
+    }
+  ],
+  "extensions": [
+    "RazerHydra"
+  ],
+  "ports": [
+    {
+      "name": "handle",
+      "node": "DGNode",
+      "graph": "01_StatusBar",
+      "type": "DrawingHandle",
+      "autoInitObjects": true,
+      "member": "handle",
+      "mode": "io",
+      "persistence": false
+    },
+    {
+      "name": "hydra",
+      "node": "DGNode",
+      "graph": "01_StatusBar",
+      "type": "RazerHydraController",
+      "autoInitObjects": true,
+      "member": "hydra",
+      "mode": "io",
+      "persistence": false
+    },
+    {
+      "name": "time",
+      "node": "DGNode",
+      "graph": "01_StatusBar",
+      "type": "Scalar",
+      "autoInitObjects": true,
+      "member": "time",
+      "mode": "in",
+      "persistence": false
+    }
+  ]
+}

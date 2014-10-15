@@ -9,8 +9,8 @@ if not platform.system().lower().startswith('win'):
 
 thirdpartyDirs = {
   'FABRIC_DIR': "Should point to Fabric Engine's installation folder.",
-  'SIXENSE_INCLUDE_DIR': 'Should point to the include folder of the RazerHydra SDK.',
-  'SIXENSE_LIBRARY_DIR': 'Should point to the library folder of the RazerHydra SDK.',
+  'SIXENSE_INCLUDE_DIR': 'Should point to the include folder of the Sixense Core SDK.',
+  'SIXENSE_LIBRARY_DIR': 'Should point to the library folder of the Sixense Core SDK.',
   'BOOST_INCLUDE_DIR': "Should point to Boost include folder.",
   'BOOST_LIBRARY_DIR': "Should point to Boost library folder."
 }

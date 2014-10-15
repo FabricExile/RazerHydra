@@ -23,16 +23,20 @@ struct RazerHydraControllerData {
   UInt8 hemi_tracking_enabled;
 };
 
-struct RazerHydraAllControllerData {
-  RazerHydraControllerData controllers[4];
-};
-
 object RazerHydraController {
-  RazerHydraControllerData controls;
+  RazerHydraControllerData controls[4];
 };
 
 const SInt32 SIXENSE_SUCCESS = 0;
 const SInt32 SIXENSE_FAILURE = 1;
+const SInt32 SIXENSE_BUTTON_BUMPER = (0x01<<7);
+const SInt32 SIXENSE_BUTTON_JOYSTICK = (0x01<<8);
+const SInt32 SIXENSE_BUTTON_1 = (0x01<<5);
+const SInt32 SIXENSE_BUTTON_2 = (0x01<<6);
+const SInt32 SIXENSE_BUTTON_3 = (0x01<<3);
+const SInt32 SIXENSE_BUTTON_4 = (0x01<<4);
+const SInt32 SIXENSE_BUTTON_START = (0x01<<0);
+const SInt32 SIXENSE_MAX_CONTROLLERS = 4;
 
 function RazerHydraController() = "Fabric_RazerHydraController_construct";
 function ~RazerHydraController() = "Fabric_RazerHydraController_destruct";

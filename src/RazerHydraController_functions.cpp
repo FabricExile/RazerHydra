@@ -33,7 +33,7 @@ std::string gLastStepString;
 
 void gSetupCallback(sixenseUtils::ControllerManager::setup_step step)
 {
-  WriteLock w_lock(gLock);
+  ReadLock w_lock(gLock);
 
   if(!gController)
     return;
@@ -47,7 +47,7 @@ void gSetupCallback(sixenseUtils::ControllerManager::setup_step step)
       report("Setup step: %s.", stepString.c_str());
       gLastStepString = stepString;
       std::string destination = "[StatusBar]";
-      std::string payload = "{\"Text\":\""+stepString+"\"}";
+      std::string payload = stepString;
       queueStatusMessage(destination.c_str(), destination.length()+1, payload.c_str(), payload.length()+1);
     }
 
@@ -58,7 +58,7 @@ void gSetupCallback(sixenseUtils::ControllerManager::setup_step step)
     {
       gLastStepString = "";
       std::string destination = "[StatusBar]";
-      std::string payload = "{}";
+      std::string payload;
       queueStatusMessage(destination.c_str(), destination.length()+1, payload.c_str(), payload.length()+1);
     }
   }
@@ -103,6 +103,7 @@ FABRIC_EXT_EXPORT void Fabric_RazerHydraController_destruct(
 FABRIC_EXT_EXPORT KL::Boolean Fabric_RazerHydraController_valid(
   KL::Traits< KL::RazerHydraController >::INParam this_
 ) {
+  ReadLock w_lock(gLock);
   return gController != NULL;
 }
 
@@ -117,6 +118,7 @@ FABRIC_EXT_EXPORT KL::Boolean Fabric_RazerHydraController_readyForMotion(
 FABRIC_EXT_EXPORT KL::SInt32 RazerHydraController_getMaxBases(
   KL::Traits< KL::RazerHydraController >::INParam this_
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return 0;
   return (KL::SInt32)sixenseGetMaxBases();
@@ -129,6 +131,7 @@ FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_setActiveBase(
   KL::Traits< KL::RazerHydraController >::INParam this_,
   KL::Traits< KL::SInt32 >::INParam i
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
   return sixenseSetActiveBase(i) == SIXENSE_SUCCESS;
@@ -139,6 +142,7 @@ FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_isBaseConnected(
   KL::Traits< KL::RazerHydraController >::INParam this_,
   KL::Traits< KL::SInt32 >::INParam i
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
   return sixenseIsBaseConnected(i) == SIXENSE_SUCCESS;
@@ -148,6 +152,7 @@ FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_isBaseConnected(
 FABRIC_EXT_EXPORT KL::SInt32 RazerHydraController_getMaxControllers(
   KL::Traits< KL::RazerHydraController >::INParam this_
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return 0;
   return (KL::SInt32)sixenseGetMaxControllers();
@@ -158,6 +163,7 @@ FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_isControllerEnabled(
   KL::Traits< KL::RazerHydraController >::INParam this_,
   KL::Traits< KL::SInt32 >::INParam which
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
   return sixenseIsControllerEnabled(which) == SIXENSE_SUCCESS;
@@ -167,6 +173,7 @@ FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_isControllerEnabled(
 FABRIC_EXT_EXPORT KL::SInt32 RazerHydraController_getNumActiveControllers(
   KL::Traits< KL::RazerHydraController >::INParam this_
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
   return (KL::SInt32)sixenseGetNumActiveControllers();
@@ -176,6 +183,7 @@ FABRIC_EXT_EXPORT KL::SInt32 RazerHydraController_getNumActiveControllers(
 FABRIC_EXT_EXPORT KL::SInt32 RazerHydraController_getHistorySize(
   KL::Traits< KL::RazerHydraController >::INParam this_
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
   return (KL::SInt32)sixenseGetHistorySize();
@@ -185,11 +193,12 @@ FABRIC_EXT_EXPORT KL::SInt32 RazerHydraController_getHistorySize(
 FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_update(
   KL::Traits< KL::RazerHydraController >::INParam this_
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
   if(sixenseGetAllNewestData((sixenseAllControllerData*)&this_->controls) != SIXENSE_SUCCESS)
     return false;
-  sixenseUtils::getTheControllerManager()->update((sixenseAllControllerData*)&this_->controls);
+  sixenseUtils::getTheControllerManager()->update((sixenseAllControllerData*)&this_->controls[0]);
   return true;
 }
 
@@ -199,6 +208,7 @@ FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_setHemisphereTrackingMode(
   KL::Traits< KL::SInt32 >::INParam which_controller,
   KL::Traits< KL::SInt32 >::INParam state
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
   return sixenseSetHemisphereTrackingMode(which_controller, state);
@@ -210,6 +220,7 @@ FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_getHemisphereTrackingMode(
   KL::Traits< KL::SInt32 >::INParam which_controller,
   KL::Traits< KL::SInt32 >::IOParam state
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
   int state_ = 0;
@@ -223,6 +234,7 @@ FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_autoEnableHemisphereTracking(
   KL::Traits< KL::RazerHydraController >::INParam this_,
   KL::Traits< KL::SInt32 >::INParam which_controller
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
   return sixenseAutoEnableHemisphereTracking(which_controller);
@@ -233,6 +245,7 @@ FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_setHighPriorityBindingEnabled
   KL::Traits< KL::RazerHydraController >::INParam this_,
   KL::Traits< KL::SInt32 >::INParam on_or_off
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
   return sixenseSetHighPriorityBindingEnabled(on_or_off);
@@ -243,6 +256,7 @@ FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_getHighPriorityBindingEnabled
   KL::Traits< KL::RazerHydraController >::INParam this_,
   KL::Traits< KL::SInt32 >::IOParam on_or_off
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
   int on_or_off_ = 0;
@@ -258,6 +272,7 @@ FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_triggerVibration(
   KL::Traits< KL::SInt32 >::INParam duration_100ms,
   KL::Traits< KL::SInt32 >::INParam pattern_id
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
   return sixenseTriggerVibration(controller_id, duration_100ms, pattern_id);
@@ -268,6 +283,7 @@ FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_setFilterEnabled(
   KL::Traits< KL::RazerHydraController >::INParam this_,
   KL::Traits< KL::SInt32 >::INParam on_or_off
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
   return sixenseSetFilterEnabled(on_or_off);
@@ -278,6 +294,7 @@ FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_getFilterEnabled(
   KL::Traits< KL::RazerHydraController >::INParam this_,
   KL::Traits< KL::SInt32 >::IOParam on_or_off
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
   int on_or_off_ = 0;
@@ -294,6 +311,7 @@ FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_setFilterParams(
   KL::Traits< KL::Float32 >::INParam far_range,
   KL::Traits< KL::Float32 >::INParam far_val
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
   return sixenseSetFilterParams(near_range, near_val, far_range, far_val);
@@ -307,9 +325,9 @@ FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_getFilterParams(
   KL::Traits< KL::Float32 >::IOParam far_range,
   KL::Traits< KL::Float32 >::IOParam far_val
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
-
   return sixenseGetFilterParams(&near_range, &near_val, &far_range, &far_val);
 }
 
@@ -320,6 +338,7 @@ FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_setBaseColor(
   KL::Traits< KL::UInt8 >::INParam green,
   KL::Traits< KL::UInt8 >::INParam blue
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
   return sixenseSetBaseColor(red, green, blue);
@@ -332,6 +351,7 @@ FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_getBaseColor(
   KL::Traits< KL::UInt8 >::IOParam green,
   KL::Traits< KL::UInt8 >::IOParam blue
 ) {
+  ReadLock w_lock(gLock);
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
   return sixenseGetBaseColor(&red, &green, &blue);
