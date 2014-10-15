@@ -1,0 +1,55 @@
+#
+# Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+#
+import platform, json, os, shutil
+Import('parentEnv', 'kl2edk', 'kl', 'extSuffix', 'STAGE_DIR')
+
+extName = 'RazerHydra'
+
+env = parentEnv.Clone()
+env.Append(CPPPATH = [env.Dir('.').abspath])
+env.Append(CCFLAGS = ['/EHsc'])
+
+env.Append(LIBS = ['libboost_thread-vc100-mt-s-1_55', 'sixense_s_x64', 'sixense_utils_s_x64', 'user32'])
+env.Append(LINKFLAGS = ['/NODEFAULTLIB:LIBCPMT', '/NODEFAULTLIB:LIBCMT', '/NODEFAULTLIB:LIBCPMTD', '/NODEFAULTLIB:LIBCMTD', '/NODEFAULTLIB:LIBCPMTD0', '/NODEFAULTLIB:LIBCMTD0'])
+env.Append(CPPDEFINES = ['SIXENSE_STATIC_LIB=1', 'SIXENSE_UTILS_STATIC_LIB=1'])
+
+sources = [
+  env.File('RazerHydra.fpm.json')
+]
+sources += env.Glob('*.kl')
+
+cppFiles = [
+  env.File('extension.cpp'),
+  env.File('RazerHydraController_functions.cpp')
+]
+
+extData = json.loads(open(sources[0].srcnode().abspath, 'r').read())
+extVersion = extData['version']
+
+extensionFiles = env.Install(STAGE_DIR, [env.File(extName+'.fpm.json')] + env.Glob('*.kl'))
+kl2edkResults = env.RunKL2EDK(cppFiles, sources)
+
+extLibFileName = env.File(extName + '-' + extSuffix)
+libraryFiles = Flatten([env.SharedLibrary(extLibFileName, cppFiles)])
+env.Depends(libraryFiles, kl2edkResults)
+
+extensionFiles += env.Install(STAGE_DIR, libraryFiles[0])
+extensionFiles = Flatten(extensionFiles)
+
+if os.environ.has_key('FABRIC_EXTS_INSTALL_DIR'):
+  INSTALL_DIR = os.environ['FABRIC_EXTS_INSTALL_DIR']
+  INSTALL_DIR = os.path.normpath(os.path.join(INSTALL_DIR, extName, extVersion))
+
+  newExtensionFiles = []
+  for sourceFile in extensionFiles:
+    relPath = os.path.relpath(sourceFile.abspath, STAGE_DIR.abspath)
+    targetPath = os.path.join(INSTALL_DIR, relPath)
+    targetFile = env.File(targetPath)
+    newExtensionFiles += env.Install(targetFile.dir, sourceFile)
+  extensionFiles += Flatten(newExtensionFiles)
+
+env.AlwaysBuild(extensionFiles)
+alias = env.Alias(extName, extensionFiles)
+
+Return('alias')

@@ -1,0 +1,59 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+require Math;
+
+struct RazerHydraControllerData {
+  Vec3 pos;
+  Mat33 rot_mat;
+  Float32 joystick_x;
+  Float32 joystick_y;
+  Float32 trigger;
+  UInt32 buttons;
+  UInt8 sequence_number;
+  Quat rot_quat;
+  UInt16 firmware_revision;
+  UInt16 hardware_revision;
+  UInt16 packet_type;
+  UInt16 magnetic_frequency;
+  SInt32 enabled;
+  SInt32 controller_index;
+  UInt8 is_docked;
+  UInt8 which_hand;
+  UInt8 hemi_tracking_enabled;
+};
+
+struct RazerHydraAllControllerData {
+  RazerHydraControllerData controllers[4];
+};
+
+object RazerHydraController {};
+
+const SInt32 SIXENSE_SUCCESS = 0;
+const SInt32 SIXENSE_FAILURE = 1;
+
+function RazerHydraController() = "Fabric_RazerHydraController_construct";
+function ~RazerHydraController() = "Fabric_RazerHydraController_destruct";
+function Boolean RazerHydraController.valid() = "Fabric_RazerHydraController_valid";
+function Boolean RazerHydraController.readyForMotion() = "Fabric_RazerHydraController_readyForMotion";
+
+function SInt32 RazerHydraController.getMaxBases() = "RazerHydraController_getMaxBases";
+function Boolean RazerHydraController.setActiveBase(SInt32 i) = "RazerHydraController_setActiveBase";
+function Boolean RazerHydraController.isBaseConnected(SInt32 i) = "RazerHydraController_isBaseConnected";
+function SInt32 RazerHydraController.getMaxControllers() = "RazerHydraController_getMaxControllers";
+function Boolean RazerHydraController.isControllerEnabled(SInt32 which) = "RazerHydraController_isControllerEnabled";
+function SInt32 RazerHydraController.getNumActiveControllers() = "RazerHydraController_getNumActiveControllers";
+function SInt32 RazerHydraController.getHistorySize() = "RazerHydraController_getHistorySize";
+function Boolean RazerHydraController.update(io RazerHydraAllControllerData data) = "RazerHydraController_update";
+function Boolean RazerHydraController.setHemisphereTrackingMode(SInt32 which_controller, SInt32 state) = "RazerHydraController_setHemisphereTrackingMode";
+function Boolean RazerHydraController.getHemisphereTrackingMode(SInt32 which_controller, io SInt32 state) = "RazerHydraController_getHemisphereTrackingMode";
+function Boolean RazerHydraController.autoEnableHemisphereTracking(SInt32 which_controller) = "RazerHydraController_autoEnableHemisphereTracking";
+function Boolean RazerHydraController.setHighPriorityBindingEnabled(SInt32 on_or_off) = "RazerHydraController_setHighPriorityBindingEnabled";
+function Boolean RazerHydraController.getHighPriorityBindingEnabled(io SInt32 on_or_off) = "RazerHydraController_getHighPriorityBindingEnabled";
+function Boolean RazerHydraController.triggerVibration(SInt32 controller_id, SInt32 duration_100ms, SInt32 pattern_id) = "RazerHydraController_triggerVibration";
+function Boolean RazerHydraController.setFilterEnabled(SInt32 on_or_off) = "RazerHydraController_setFilterEnabled";
+function Boolean RazerHydraController.getFilterEnabled(io SInt32 on_or_off) = "RazerHydraController_getFilterEnabled";
+function Boolean RazerHydraController.setFilterParams(Float32 near_range, Float32 near_val, Float32 far_range, Float32 far_val) = "RazerHydraController_setFilterParams";
+function Boolean RazerHydraController.getFilterParams(io Float32 near_range, io Float32 near_val, io Float32 far_range, io Float32 far_val) = "RazerHydraController_getFilterParams";
+function Boolean RazerHydraController.setBaseColor(UInt8 red, UInt8 green, UInt8 blue) = "RazerHydraController_setBaseColor";
+function Boolean RazerHydraController.getBaseColor(io UInt8 red, io UInt8 green, io UInt8 blue) = "RazerHydraController_getBaseColor";
