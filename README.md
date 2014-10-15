@@ -7,7 +7,7 @@ RazerHydra allows you to read the device tracking information as well as getting
 extension status
 ================
 
-This extension has been built and tested against Fabric Engine 1.3.1. Higher release might work, but this hasn't been validated. Feel free to use this code for reference or training purposes, it's meant to be an example of how to integrate custom libraries into KL.
+This extension has been built and tested against Fabric Engine 1.3.0. Higher release might work, but this hasn't been validated. Feel free to use this code for reference or training purposes, it's meant to be an example of how to integrate custom libraries into KL.
 
 RazerHydra is currently only supported on Windows.
 
@@ -52,7 +52,7 @@ The extension repository also contains a series of unit tests, with which you ca
 samples
 =======
 
-The splice files in the samples folder can be run with the splice standalone command line tool.
+The splice files in the samples folder can be run with the splice standalone command line tool. Some samples might require Fabric Engine 1.13.1.
 
 license
 ==========
