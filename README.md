@@ -49,6 +49,11 @@ The extension repository also contains a series of unit tests, with which you ca
 
     python test/test_all.py
 
+samples
+=======
+
+The splice files in the samples folder can be run with the splice standalone command line tool.
+
 license
 ==========
 
