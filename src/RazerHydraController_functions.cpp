@@ -26,20 +26,6 @@ typedef boost::unique_lock< Lock >  WriteLock;
 typedef boost::shared_lock< Lock >  ReadLock;
 Lock gLock;
 
-// FABRIC_EXT_EXPORT KL::Boolean SixenseManager_update(
-//   KL::SixenseManager::INParam razer,
-//   KL::SixenseAllControllerData::IOParam data
-// ) {
-//   if(!razer.isValid()) return 0;
-//   if(!razer->handle) return 0;
-
-//   if(sixenseGetAllNewestData((sixenseAllControllerData*)&data) != SIXENSE_SUCCESS)
-//     return false;
-//   sixenseUtils::getTheControllerManager()->update((sixenseAllControllerData*)&data);
-
-//   return true;
-// }
-
 sixenseUtils::ControllerManager * gController = NULL;
 unsigned int gNumInstances = 0;
 bool gSetupDone = false;
@@ -197,14 +183,13 @@ FABRIC_EXT_EXPORT KL::SInt32 RazerHydraController_getHistorySize(
 
 // Defined at src\RazerHydraController.kl:51:1
 FABRIC_EXT_EXPORT KL::Boolean RazerHydraController_update(
-  KL::Traits< KL::RazerHydraController >::INParam this_,
-  KL::Traits< KL::RazerHydraAllControllerData >::IOParam data
+  KL::Traits< KL::RazerHydraController >::INParam this_
 ) {
   if(!Fabric_RazerHydraController_valid(this_))
     return false;
-  if(sixenseGetAllNewestData((sixenseAllControllerData*)&data) != SIXENSE_SUCCESS)
+  if(sixenseGetAllNewestData((sixenseAllControllerData*)&this_->controls) != SIXENSE_SUCCESS)
     return false;
-  sixenseUtils::getTheControllerManager()->update((sixenseAllControllerData*)&data);
+  sixenseUtils::getTheControllerManager()->update((sixenseAllControllerData*)&this_->controls);
   return true;
 }
 

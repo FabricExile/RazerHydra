@@ -27,7 +27,9 @@ struct RazerHydraAllControllerData {
   RazerHydraControllerData controllers[4];
 };
 
-object RazerHydraController {};
+object RazerHydraController {
+  RazerHydraControllerData controls;
+};
 
 const SInt32 SIXENSE_SUCCESS = 0;
 const SInt32 SIXENSE_FAILURE = 1;
@@ -44,7 +46,7 @@ function SInt32 RazerHydraController.getMaxControllers() = "RazerHydraController
 function Boolean RazerHydraController.isControllerEnabled(SInt32 which) = "RazerHydraController_isControllerEnabled";
 function SInt32 RazerHydraController.getNumActiveControllers() = "RazerHydraController_getNumActiveControllers";
 function SInt32 RazerHydraController.getHistorySize() = "RazerHydraController_getHistorySize";
-function Boolean RazerHydraController.update(io RazerHydraAllControllerData data) = "RazerHydraController_update";
+function Boolean RazerHydraController.update() = "RazerHydraController_update";
 function Boolean RazerHydraController.setHemisphereTrackingMode(SInt32 which_controller, SInt32 state) = "RazerHydraController_setHemisphereTrackingMode";
 function Boolean RazerHydraController.getHemisphereTrackingMode(SInt32 which_controller, io SInt32 state) = "RazerHydraController_getHemisphereTrackingMode";
 function Boolean RazerHydraController.autoEnableHemisphereTracking(SInt32 which_controller) = "RazerHydraController_autoEnableHemisphereTracking";

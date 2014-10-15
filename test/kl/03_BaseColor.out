@@ -1,2 +1,5 @@
 [FABRIC:MT] RazerHydra: Controller initialized.
+[FABRIC:MT] red 255, green 0, blue 0
+[FABRIC:MT] red 0, green 255, blue 0
+[FABRIC:MT] red 0, green 0, blue 255
 [FABRIC:MT] RazerHydra: Controller shutdown.
