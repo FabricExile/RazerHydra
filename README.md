@@ -9,8 +9,6 @@ extension status
 
 This extension has been built and tested against Fabric Engine 1.3.0. Higher release might work, but this hasn't been validated. Feel free to use this code for reference or training purposes, it's meant to be an example of how to integrate custom libraries into KL.
 
-RazerHydra is currently only supported on Windows.
-
 structure
 =========
 
@@ -21,7 +19,7 @@ The latest KL2EDK documentation can be found here: http://documentation.fabricen
 supported platforms
 ===================
 
-To date all three major platforms (windows, linux, osx) are supported, if you build the thirdparty dependencies for the corresponding platform.
+RazerHydra is currently only supported on Windows.
 
 building
 ========
