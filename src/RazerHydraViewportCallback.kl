@@ -1,0 +1,64 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+require SpliceStandalone:">1.0.0";
+require Singletons;
+
+object RazerHydraViewportCallback : SpliceStandaloneViewportCallback {
+  RazerHydraController controller;
+  Xfo xfo;
+  Float32 walkSpeed;
+  Float32 turnSpeed;
+  Boolean requiresUpdate;
+};
+
+function RazerHydraViewportCallback() {
+  this.init(RazerHydraController(), Xfo());
+  this.requiresUpdate = true;
+}
+
+function RazerHydraViewportCallback(RazerHydraController controller, Xfo xfo) {
+  this.init(controller, xfo);
+  this.requiresUpdate = false;
+}
+
+function RazerHydraViewportCallback.init!(RazerHydraController controller, Xfo xfo) {
+  this.controller = controller;
+  this.xfo = xfo;
+  this.walkSpeed = 1.0;
+  this.turnSpeed = 1.0;
+}
+
+function RazerHydraViewportCallback.registerForViewport!() {
+  SpliceStandaloneViewport viewport = Singleton_get('Viewport');
+  if(viewport) {
+    viewport.registerCallback(SpliceStandaloneViewportPhase_Camera, this);
+  }
+}
+
+function Boolean RazerHydraViewportCallback.perform!(SpliceStandaloneViewportPhase phase, io SpliceStandaloneViewport viewport) {
+  switch(phase) {
+
+    case SpliceStandaloneViewportPhase_Camera: {
+
+      if(this.requiresUpdate)
+        this.controller.update();
+
+      Float32 x = this.controller.controls[0].joystick_x;
+      Float32 y = 0.0;
+      Float32 z = this.controller.controls[0].joystick_y;
+
+      if(this.controller.controls[0].buttons & SIXENSE_BUTTON_3)
+        y = 1.0;
+      else if(this.controller.controls[0].buttons & SIXENSE_BUTTON_1)
+        y = -1.0;
+      viewport.camera.walk(x * this.walkSpeed * 0.25, y * this.walkSpeed * 0.25, -z * this.walkSpeed * 0.25);
+
+      x = this.controller.controls[1].joystick_x;
+      y = this.controller.controls[1].joystick_y;
+      viewport.camera.turn(-x * this.turnSpeed * 0.0225, y * this.turnSpeed * 0.0225);
+    }
+  }
+  return false;
+}

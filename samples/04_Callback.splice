@@ -1,0 +1,69 @@
+{
+  "version": "1013001",
+  "info": {
+    "hostAppName": "Splice Standalone",
+    "hostAppVersion": "1.0"
+  },
+  "nodes": [
+    {
+      "name": "DGNode",
+      "dependencies": {},
+      "bindings": [
+        {
+          "operator": {
+            "name": "razerOp",
+            "entry": "razerOp",
+            "filename": "razerOp.kl",
+            "kl": "require InlineDrawing;\nrequire RazerHydra;\nrequire Singletons;\n\noperator razerOp(io DrawingHandle handle, io RazerHydraController hydra, io SpliceStandaloneViewportCallback callback, in Scalar time)\n{\n  if(!callback) {\n    Xfo xfo;\n    SpliceStandaloneViewport vp = Singleton_get('Viewport');\n    if(vp) {\n      xfo.tr = vp.camera.position;\n      xfo.ori.setFromDirectionAndUpvector(xfo.tr- vp.camera.target, Vec3(0, 1, 0));\n    }\n    \n    RazerHydraViewportCallback c(hydra, xfo);\n    c.registerForViewport();\n    callback = c;\n  }\n  \n  hydra.update();\n}\n",
+            "portmap": {}
+          }
+        }
+      ]
+    }
+  ],
+  "extensions": [
+    "RazerHydra"
+  ],
+  "ports": [
+    {
+      "name": "callback",
+      "node": "DGNode",
+      "graph": "02_Camera",
+      "type": "SpliceStandaloneViewportCallback",
+      "autoInitObjects": true,
+      "member": "callback",
+      "mode": "io",
+      "persistence": false
+    },
+    {
+      "name": "handle",
+      "node": "DGNode",
+      "graph": "02_Camera",
+      "type": "DrawingHandle",
+      "autoInitObjects": true,
+      "member": "handle",
+      "mode": "io",
+      "persistence": false
+    },
+    {
+      "name": "hydra",
+      "node": "DGNode",
+      "graph": "02_Camera",
+      "type": "RazerHydraController",
+      "autoInitObjects": true,
+      "member": "hydra",
+      "mode": "io",
+      "persistence": false
+    },
+    {
+      "name": "time",
+      "node": "DGNode",
+      "graph": "02_Camera",
+      "type": "Scalar",
+      "autoInitObjects": true,
+      "member": "time",
+      "mode": "in",
+      "persistence": false
+    }
+  ]
+}
