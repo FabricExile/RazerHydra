@@ -14,7 +14,7 @@
             "name": "razerOp",
             "entry": "razerOp",
             "filename": "razerOp.kl",
-            "kl": "require InlineDrawing;\nrequire RazerHydra;\nrequire Singletons;\n\noperator razerOp(io DrawingHandle handle, io RazerHydraController hydra, io SpliceStandaloneViewportCallback callback, in Scalar time)\n{\n  if(!callback) {\n    Xfo xfo;\n    SpliceStandaloneViewport vp = Singleton_get('Viewport');\n    if(vp) {\n      xfo.tr = vp.camera.position;\n      xfo.ori.setFromDirectionAndUpvector(xfo.tr- vp.camera.target, Vec3(0, 1, 0));\n    }\n    \n    RazerHydraViewportCallback c(hydra, xfo);\n    c.registerForViewport();\n    callback = c;\n  }\n  \n  hydra.update();\n}\n",
+            "kl": "require InlineDrawing;\nrequire RazerHydra;\nrequire Singletons;\n\noperator razerOp(io DrawingHandle handle, io RazerHydraController hydra, io ViewportCallback callback, in Scalar time)\n{\n  if(!callback) {\n    RazerHydraViewportCallback c(hydra);\n    c.registerForViewport();\n    callback = c;\n  }\n  \n  hydra.update();\n}\n",
             "portmap": {}
           }
         }
@@ -28,8 +28,8 @@
     {
       "name": "callback",
       "node": "DGNode",
-      "graph": "02_Camera",
-      "type": "SpliceStandaloneViewportCallback",
+      "graph": "04_Callback",
+      "type": "ViewportCallback",
       "autoInitObjects": true,
       "member": "callback",
       "mode": "io",
@@ -38,7 +38,7 @@
     {
       "name": "handle",
       "node": "DGNode",
-      "graph": "02_Camera",
+      "graph": "04_Callback",
       "type": "DrawingHandle",
       "autoInitObjects": true,
       "member": "handle",
@@ -48,7 +48,7 @@
     {
       "name": "hydra",
       "node": "DGNode",
-      "graph": "02_Camera",
+      "graph": "04_Callback",
       "type": "RazerHydraController",
       "autoInitObjects": true,
       "member": "hydra",
@@ -58,7 +58,7 @@
     {
       "name": "time",
       "node": "DGNode",
-      "graph": "02_Camera",
+      "graph": "04_Callback",
       "type": "Scalar",
       "autoInitObjects": true,
       "member": "time",
