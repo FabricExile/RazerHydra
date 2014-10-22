@@ -28,12 +28,16 @@ function RazerHydraViewportCallback.init!(RazerHydraController controller) {
   this.turnSpeed = 1.0;
 }
 
-function RazerHydraViewportCallback.registerForViewport!() {
+function RazerHydraViewportCallback.registerForViewport!(String viewportName) {
   InlineDrawing drawing = Singleton_get('InlineDrawing');
-  Viewport viewport = drawing.getViewport('default');
+  Viewport viewport = drawing.getViewport(viewportName);
   if(viewport) {
     viewport.registerCallback(ViewportDrawPhase_PreDraw, this);
   }
+}
+
+function RazerHydraViewportCallback.registerForViewport!() {
+  this.registerForViewport('default');
 }
 
 function Boolean RazerHydraViewportCallback.invoke!(ViewportDrawPhase phase, io Viewport viewport, io DrawContext context) {
