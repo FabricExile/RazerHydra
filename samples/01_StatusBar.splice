@@ -14,7 +14,7 @@
             "name": "hydraOp",
             "entry": "hydraOp",
             "filename": "hydraOp.kl",
-            "kl": "require InlineDrawing;\nrequire RazerHydra;\nrequire SpliceStandalone;\nrequire Singletons;\n\noperator hydraOp(io DrawingHandle handle, io RazerHydraController hydra, in Scalar time)\n{\n  queueStatusMessage('[StatusBar]', 'A new message for the status bar, time is '+time);\n}\n",
+            "kl": "require InlineDrawing;\nrequire RazerHydra;\nrequire Singletons;\n\noperator hydraOp(io DrawingHandle handle, io RazerHydraController hydra, in Scalar time)\n{\n  queueStatusMessage('[StatusBar]', 'A new message for the status bar, time is '+time);\n}\n",
             "portmap": {}
           }
         }
