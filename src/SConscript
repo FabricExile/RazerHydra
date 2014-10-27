@@ -36,7 +36,7 @@ kl2edkResults = env.RunKL2EDK(headers, sources)
 
 extLibFileName = env.File(extName + '-' + extSuffix)
 libraryFiles = Flatten([env.SharedLibrary(extLibFileName, cppFiles)])
-env.Depends(libraryFiles, kl2edkResults)
+env.Depends(cppFiles, kl2edkResults)
 
 extensionFiles += env.Install(STAGE_DIR, libraryFiles[0])
 extensionFiles = Flatten(extensionFiles)
