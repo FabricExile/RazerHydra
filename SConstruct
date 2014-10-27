@@ -70,7 +70,10 @@ def RunKL2EDK(
 
   return result
 
-env = Environment(ENV = os.environ)
+# for windows for now use Visual Studio 2010. 
+# if you upgrade this you will also have to provide
+# boost libs for the corresponding VS version
+env = Environment(ENV = os.environ, MSVC_VERSION='10.0')
 env.AddMethod(RunKL2EDK)
 
 # find the third party libs

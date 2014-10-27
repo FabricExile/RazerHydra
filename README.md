@@ -20,6 +20,7 @@ supported platforms
 ===================
 
 RazerHydra is currently only supported on Windows.
+For Fabric Engine 1.13.1 the extension has to be built using Visual Studio 2010 (through scons). For future versions VS 2013 might be used.
 
 building
 ========
