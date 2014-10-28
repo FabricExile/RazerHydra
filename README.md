@@ -20,7 +20,7 @@ supported platforms
 ===================
 
 RazerHydra is currently only supported on Windows.
-For Fabric Engine 1.13.1 the extension has to be built using Visual Studio 2010 (through scons). For future versions VS 2013 might be used.
+For Fabric Engine 1.14 the extension has to be built using Visual Studio 2010 (through scons). For future versions VS 2013 might be used.
 
 building
 ========
@@ -51,7 +51,7 @@ The extension repository also contains a series of unit tests, with which you ca
 samples
 =======
 
-The splice files in the samples folder can be run with the splice standalone command line tool. Some samples might require Fabric Engine 1.13.1.
+The splice files in the samples folder can be run with the splice standalone command line tool. Some samples might require Fabric Engine 1.14.
 
 license
 ==========
