@@ -4,7 +4,6 @@
     "RazerHydra"
   ],
   "code": [
-    "RazerHydraController.kl",
-    "RazerHydraViewportCallback.kl"
+    "RazerHydraController.kl"
   ]
 }

@@ -63,3 +63,7 @@ function Boolean RazerHydraController.setFilterParams(Float32 near_range, Float3
 function Boolean RazerHydraController.getFilterParams(io Float32 near_range, io Float32 near_val, io Float32 far_range, io Float32 far_val) = "RazerHydraController_getFilterParams";
 function Boolean RazerHydraController.setBaseColor(UInt8 red, UInt8 green, UInt8 blue) = "RazerHydraController_setBaseColor";
 function Boolean RazerHydraController.getBaseColor(io UInt8 red, io UInt8 green, io UInt8 blue) = "RazerHydraController_getBaseColor";
+
+function RazerHydraControllerData RazerHydraController.getControl(UInt8 index) {
+  return this.controls[index > 3 ? 3 : index];
+}

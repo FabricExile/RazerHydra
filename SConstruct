@@ -50,7 +50,10 @@ if kl2edk is None:
 kl = which('kl')
 if kl is None:
   raise Exception('kl could not be found on the PATH.')
-Export('kl2edk', 'kl')
+kl2dfg = which('kl2dfg')
+if kl2dfg is None:
+  raise Exception('kl2dfg could not be found on the PATH.')
+Export('kl2edk', 'kl2dfg', 'kl')
 
 # setup the environment and define some methods
 def RunKL2EDK(
@@ -70,11 +73,30 @@ def RunKL2EDK(
 
   return result
 
+def RunKL2DFG(
+  env,
+  targets,
+  sources
+  ):
+
+  targetFolder = os.path.split(targets[0].path)[0]
+
+  cmdLine = [[kl2dfg] + [sources[0].srcnode().path] + [targetFolder]]
+  result = env.Command(
+    targets,
+    sources,
+    cmdLine   
+  )
+
+  return result
+
 # for windows for now use Visual Studio 2010. 
 # if you upgrade this you will also have to provide
 # boost libs for the corresponding VS version
+os.environ['FABRIC_EXTS_PATH'] += os.pathsep + str(Dir('stage').Dir('Exts'))
 env = Environment(ENV = os.environ, MSVC_VERSION='10.0')
 env.AddMethod(RunKL2EDK)
+env.AddMethod(RunKL2DFG)
 
 # find the third party libs
 for thirdpartyDir in thirdpartyDirs:

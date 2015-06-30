@@ -3,7 +3,7 @@
  */
 
 #include <FabricEDK.h>
-#include "RazerHydraController.h"
+#include "RazerHydra.h"
 
 #include <sixense.h>
 #include <sixense_math.hpp>
