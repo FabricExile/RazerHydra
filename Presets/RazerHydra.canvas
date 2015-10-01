@@ -1,57 +1,125 @@
 {
   "objectType" : "Graph",
   "metadata" : {
-    "camera_mat44" : "{\n  \"row0\" : {\n    \"x\" : 0.95127272605896,\n    \"y\" : -0.1315051019191742,\n    \"z\" : 0.2789652049541473,\n    \"t\" : 8.01891040802002\n    },\n  \"row1\" : {\n    \"x\" : -1.177212197944755e-06,\n    \"y\" : 0.9045246839523315,\n    \"z\" : 0.4264230132102966,\n    \"t\" : 17.2138671875\n    },\n  \"row2\" : {\n    \"x\" : -0.3084073066711426,\n    \"y\" : -0.4056268036365509,\n    \"z\" : 0.8604578971862793,\n    \"t\" : 31.31602478027344\n    },\n  \"row3\" : {\n    \"x\" : 0,\n    \"y\" : 0,\n    \"z\" : 0,\n    \"t\" : 1\n    }\n  }",
-    "timeline_start" : "1",
-    "camera_focalDistance" : "39.18251419067383",
-    "timeline_current" : "22",
-    "timeline_end" : "50",
-    "uiGraphPan" : "{\"x\": 339, \"y\": 5}"
+    "uiGraphZoom" : "{\n  \"value\" : 0.6095688939094544\n  }",
+    "uiGraphPan" : "{\n  \"x\" : 273.5127563476563,\n  \"y\" : -74.14134216308594\n  }"
     },
-  "title" : "",
+  "title" : "RazerHydra",
   "ports" : [
     {
       "objectType" : "Port",
-      "nodePortType" : "Out",
-      "name" : "timeline",
-      "execPortType" : "In",
-      "typeSpec" : "Float32"
-      },
-    {
-      "objectType" : "Port",
       "nodePortType" : "In",
-      "name" : "pos",
+      "name" : "xfo1",
       "execPortType" : "Out",
-      "typeSpec" : "Vec3"
+      "typeSpec" : "Xfo"
       },
     {
       "objectType" : "Port",
       "nodePortType" : "In",
-      "name" : "trigger",
+      "name" : "joystickX1",
       "execPortType" : "Out",
       "typeSpec" : "Float32"
       },
     {
       "objectType" : "Port",
       "nodePortType" : "In",
-      "name" : "this",
+      "name" : "joystickY1",
       "execPortType" : "Out",
-      "typeSpec" : "DrawingHandle"
+      "typeSpec" : "Float32"
       },
     {
       "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "trigger1",
+      "execPortType" : "Out",
+      "typeSpec" : "Float32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "buttons1",
+      "execPortType" : "Out",
+      "typeSpec" : "UInt32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "xfo2",
+      "execPortType" : "Out",
+      "typeSpec" : "Xfo"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "joystickX2",
+      "execPortType" : "Out",
+      "typeSpec" : "Float32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "joystickY2",
+      "execPortType" : "Out",
+      "typeSpec" : "Float32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "trigger2",
+      "execPortType" : "Out",
+      "typeSpec" : "Float32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "buttons2",
+      "execPortType" : "Out",
+      "typeSpec" : "UInt32"
+      },
+    {
+      "objectType" : "Port",
+      "metadata" : {
+        "uiPersistValue" : "true"
+        },
       "nodePortType" : "Out",
-      "name" : "other",
+      "defaultValues" : {
+        "Scalar" : 0.1000000014901161
+        },
+      "name" : "scale",
       "execPortType" : "In",
       "typeSpec" : "Scalar"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "xfo",
+      "execPortType" : "In",
+      "typeSpec" : "Xfo"
       }
     ],
-  "extDeps" : {},
+  "extDeps" : {
+    "RazerHydra" : "*"
+    },
   "nodes" : [
+    {
+      "objectType" : "Var",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":516.0,\"y\":92.0}"
+        },
+      "name" : "controller",
+      "ports" : [
+        {
+          "objectType" : "VarPort",
+          "nodePortType" : "IO",
+          "name" : "value"
+          }
+        ],
+      "dataType" : "RazerHydraController"
+      },
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\": -107, \"y\": 201}"
+        "uiGraphPos" : "{\"x\":290.0,\"y\":88.0}"
         },
       "name" : "RazerHydraController",
       "ports" : [
@@ -61,28 +129,13 @@
           "name" : "result"
           }
         ],
-      "executable" : "ThirdParty.RazerHydra.RazerHydraController.RazerHydraController"
-      },
-    {
-      "objectType" : "Var",
-      "metadata" : {
-        "uiGraphPos" : "{\"x\": 116, \"y\": 231}"
-        },
-      "name" : "hydra",
-      "ports" : [
-        {
-          "objectType" : "VarPort",
-          "nodePortType" : "IO",
-          "name" : "value"
-          }
-        ],
-      "dataType" : "RazerHydraController",
-      "extDep" : "RazerHydra:*"
+      "executable" : "ThirdParty.RazerHydra.RazerHydraController.RazerHydraController",
+      "presetGUID" : "D4F95F8E393FF5D4B761DE1973876117"
       },
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\": 256, \"y\": 241}"
+        "uiGraphPos" : "{\"x\":700.0,\"y\":139.0}"
         },
       "name" : "Update",
       "ports" : [
@@ -97,12 +150,13 @@
           "name" : "result"
           }
         ],
-      "executable" : "ThirdParty.RazerHydra.RazerHydraController.Update"
+      "executable" : "ThirdParty.RazerHydra.RazerHydraController.Update",
+      "presetGUID" : "1177907E39FE581AB88AD009DA3C53B0"
       },
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\": 429, \"y\": 236}"
+        "uiGraphPos" : "{\"x\":881.0,\"y\":182.0}"
         },
       "name" : "GetControl",
       "ports" : [
@@ -122,14 +176,15 @@
           "name" : "result"
           }
         ],
-      "executable" : "ThirdParty.RazerHydra.RazerHydraController.GetControl"
+      "executable" : "ThirdParty.RazerHydra.RazerHydraController.GetControl",
+      "presetGUID" : "E0A7748994769101FD7B1563E3A9539D"
       },
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\": 584, \"y\": 101}"
+        "uiGraphPos" : "{\"x\":1140.764526367188,\"y\":121.0}"
         },
-      "name" : "DecomposeRazerHydraControllerData",
+      "name" : "RazerHydraControllerData",
       "ports" : [
         {
           "objectType" : "InstPort",
@@ -222,14 +277,15 @@
           "name" : "hemiTrackingEnabled"
           }
         ],
-      "executable" : "ThirdParty.RazerHydra.RazerHydraControllerData.DecomposeRazerHydraControllerData"
+      "executable" : "ThirdParty.RazerHydra.RazerHydraControllerData.DecomposeRazerHydraControllerData",
+      "presetGUID" : "530BA1BE1E3B472E46106BD69D45D280"
       },
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\": 1137, \"y\": 276}"
+        "uiGraphPos" : "{\"x\":1818.53857421875,\"y\":210.6986083984375}"
         },
-      "name" : "ComposeXfo",
+      "name" : "Xfo",
       "ports" : [
         {
           "objectType" : "InstPort",
@@ -244,13 +300,6 @@
         {
           "objectType" : "InstPort",
           "nodePortType" : "In",
-          "defaultValues" : {
-            "Vec3" : {
-              "x" : 1,
-              "y" : 1,
-              "z" : 1
-              }
-            },
           "name" : "sc"
           },
         {
@@ -259,18 +308,239 @@
           "name" : "result"
           }
         ],
-      "executable" : "Fabric.Exts.Math.Xfo.ComposeXfo"
+      "executable" : "Fabric.Exts.Math.Xfo.ComposeXfo",
+      "presetGUID" : "C61287D19D84D9733903DDC14FABD4AF"
       },
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\": 955, \"y\": 300}"
+        "uiGraphPos" : "{\"x\":889.7960205078125,\"y\":320.0}"
+        },
+      "name" : "GetControl_2",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "this"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "defaultValues" : {
+            "UInt8" : 1
+            },
+          "name" : "index"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "result"
+          }
+        ],
+      "executable" : "ThirdParty.RazerHydra.RazerHydraController.GetControl",
+      "presetGUID" : "E0A7748994769101FD7B1563E3A9539D"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":2048.17138671875,\"y\":305.653076171875}"
+        },
+      "name" : "Mul",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "lhs"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "rhs"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "result"
+          }
+        ],
+      "executable" : "Fabric.Core.Math.Mul",
+      "presetGUID" : "CC951B43BB879483B46EFF7965692350"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":1151.17041015625,\"y\":582.5586547851563}"
+        },
+      "name" : "RazerHydraControllerData_2",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "value"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "pos"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "rotMat"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "joystickX"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "joystickY"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "trigger"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "buttons"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "sequenceNumber"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "rotQuat"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "firmwareRevision"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "hardwareRevision"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "packetType"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "magneticFrequency"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "enabled"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "controllerIndex"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "isDocked"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "whichHand"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "hemiTrackingEnabled"
+          }
+        ],
+      "executable" : "ThirdParty.RazerHydra.RazerHydraControllerData.DecomposeRazerHydraControllerData",
+      "presetGUID" : "530BA1BE1E3B472E46106BD69D45D280"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":1842.054321289063,\"y\":624.4573974609375}"
+        },
+      "name" : "Xfo_2",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "ori"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "tr"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "sc"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "result"
+          }
+        ],
+      "executable" : "Fabric.Exts.Math.Xfo.ComposeXfo",
+      "presetGUID" : "C61287D19D84D9733903DDC14FABD4AF"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":2066.765625,\"y\":724.3333740234375}"
+        },
+      "name" : "Mul_2",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "lhs"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "rhs"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "result"
+          }
+        ],
+      "executable" : "Fabric.Core.Math.Mul",
+      "presetGUID" : "CC951B43BB879483B46EFF7965692350"
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":1532.036499023438,\"y\":343.9017944335938}"
         },
       "name" : "MultiplyScalar",
       "ports" : [
         {
           "objectType" : "InstPort",
           "nodePortType" : "In",
+          "defaultValues" : {
+            "Vec3" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+              }
+            },
           "name" : "this"
           },
         {
@@ -284,156 +554,13 @@
           "name" : "result"
           }
         ],
-      "executable" : "Fabric.Exts.Math.Vec3.MultiplyScalar"
+      "executable" : "Fabric.Exts.Math.Func.MultiplyScalar",
+      "presetGUID" : "8EC64304FD2D82AEC7EBB545E4A9709B"
       },
     {
       "objectType" : "Inst",
       "metadata" : {
-        "uiGraphPos" : "{\"x\": 1066, \"y\": -79}"
-        },
-      "name" : "EmptyDrawingHandle",
-      "ports" : [
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "Out",
-          "name" : "handle"
-          }
-        ],
-      "executable" : "Fabric.Exts.InlineDrawing.DrawingHandle.EmptyDrawingHandle"
-      },
-    {
-      "objectType" : "Inst",
-      "metadata" : {
-        "uiGraphPos" : "{\"x\": 1356, \"y\": 79}"
-        },
-      "name" : "DrawPolygonMesh",
-      "ports" : [
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "IO",
-          "name" : "this"
-          },
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "In",
-          "name" : "name"
-          },
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "In",
-          "name" : "color"
-          },
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "In",
-          "name" : "transform"
-          },
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "In",
-          "name" : "mesh"
-          },
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "In",
-          "name" : "wireFrame"
-          },
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "Out",
-          "name" : "dummyResult"
-          },
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "Out",
-          "name" : "instance"
-          }
-        ],
-      "executable" : "Fabric.Exts.InlineDrawing.DrawingHandle.DrawPolygonMesh"
-      },
-    {
-      "objectType" : "Inst",
-      "metadata" : {
-        "uiGraphPos" : "{\"x\": 542, \"y\": -51}"
-        },
-      "name" : "PolygonMesh",
-      "ports" : [
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "In",
-          "name" : "float64Positions"
-          },
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "Out",
-          "name" : "result"
-          }
-        ],
-      "executable" : "Fabric.Exts.Geometry.PolygonMesh.PolygonMesh"
-      },
-    {
-      "objectType" : "Inst",
-      "metadata" : {
-        "uiGraphPos" : "{\"x\": 711, \"y\": -72}"
-        },
-      "name" : "AddCuboid",
-      "ports" : [
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "IO",
-          "name" : "this"
-          },
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "In",
-          "name" : "xfo"
-          },
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "In",
-          "defaultValues" : {
-            "Float32" : 1
-            },
-          "name" : "x"
-          },
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "In",
-          "defaultValues" : {
-            "Float32" : 1
-            },
-          "name" : "y"
-          },
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "In",
-          "defaultValues" : {
-            "Float32" : 1
-            },
-          "name" : "z"
-          }
-        ],
-      "executable" : "Fabric.Exts.Geometry.PolygonMesh.AddCuboid"
-      },
-    {
-      "objectType" : "Inst",
-      "metadata" : {
-        "uiGraphPos" : "{\"x\": 1093, \"y\": 29}"
-        },
-      "name" : "Cache",
-      "ports" : [
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "In",
-          "name" : "value"
-          }
-        ],
-      "executable" : "Fabric.Core.Data.Cache"
-      },
-    {
-      "objectType" : "Inst",
-      "metadata" : {
-        "uiGraphPos" : "{\"x\": 941.5, \"y\": 418.5}"
+        "uiGraphPos" : "{\"x\":1534.670288085938,\"y\":561.2840576171875}"
         },
       "name" : "MultiplyScalar_2",
       "ports" : [
@@ -452,9 +579,6 @@
         {
           "objectType" : "InstPort",
           "nodePortType" : "In",
-          "defaultValues" : {
-            "Float32" : 4
-            },
           "name" : "other"
           },
         {
@@ -463,86 +587,96 @@
           "name" : "result"
           }
         ],
-      "executable" : "Fabric.Exts.Math.Vec3.MultiplyScalar"
-      },
-    {
-      "objectType" : "Inst",
-      "metadata" : {
-        "uiGraphPos" : "{\"x\": 849, \"y\": -37}"
-        },
-      "name" : "RecomputePointNormals",
-      "ports" : [
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "IO",
-          "name" : "this"
-          },
-        {
-          "objectType" : "InstPort",
-          "nodePortType" : "In",
-          "name" : "hardAngleRadians"
-          }
-        ],
-      "executable" : "Fabric.Exts.Geometry.PolygonMesh.RecomputePointNormals"
+      "executable" : "Fabric.Exts.Math.Func.MultiplyScalar",
+      "presetGUID" : "8EC64304FD2D82AEC7EBB545E4A9709B"
       }
     ],
   "connections" : {
-    "other" : [
-      "MultiplyScalar.other"
+    "scale" : [
+      "MultiplyScalar.other",
+      "MultiplyScalar_2.other"
       ],
-    "RazerHydraController.result" : [
-      "hydra.value"
+    "xfo" : [
+      "Mul.lhs",
+      "Mul_2.lhs"
       ],
-    "hydra.value" : [
+    "controller.value" : [
       "Update.this"
       ],
+    "RazerHydraController.result" : [
+      "controller.value"
+      ],
     "Update.this" : [
-      "GetControl.this"
+      "GetControl.this",
+      "GetControl_2.this"
       ],
     "GetControl.result" : [
-      "DecomposeRazerHydraControllerData.value"
+      "RazerHydraControllerData.value"
       ],
-    "DecomposeRazerHydraControllerData.pos" : [
-      "MultiplyScalar.this",
-      "pos"
+    "RazerHydraControllerData.pos" : [
+      "MultiplyScalar.this"
       ],
-    "DecomposeRazerHydraControllerData.trigger" : [
-      "trigger"
+    "RazerHydraControllerData.joystickX" : [
+      "joystickX1"
       ],
-    "DecomposeRazerHydraControllerData.rotQuat" : [
-      "ComposeXfo.ori"
+    "RazerHydraControllerData.joystickY" : [
+      "joystickY1"
       ],
-    "ComposeXfo.result" : [
-      "DrawPolygonMesh.transform"
+    "RazerHydraControllerData.trigger" : [
+      "trigger1"
+      ],
+    "RazerHydraControllerData.buttons" : [
+      "buttons1"
+      ],
+    "RazerHydraControllerData.rotQuat" : [
+      "Xfo.ori"
+      ],
+    "Xfo.result" : [
+      "Mul.rhs"
+      ],
+    "GetControl_2.result" : [
+      "RazerHydraControllerData_2.value"
+      ],
+    "Mul.result" : [
+      "xfo1"
+      ],
+    "RazerHydraControllerData_2.pos" : [
+      "MultiplyScalar_2.this"
+      ],
+    "RazerHydraControllerData_2.joystickX" : [
+      "joystickX2"
+      ],
+    "RazerHydraControllerData_2.joystickY" : [
+      "joystickY2"
+      ],
+    "RazerHydraControllerData_2.trigger" : [
+      "trigger2"
+      ],
+    "RazerHydraControllerData_2.buttons" : [
+      "buttons2"
+      ],
+    "RazerHydraControllerData_2.rotQuat" : [
+      "Xfo_2.ori"
+      ],
+    "Xfo_2.result" : [
+      "Mul_2.rhs"
+      ],
+    "Mul_2.result" : [
+      "xfo2"
       ],
     "MultiplyScalar.result" : [
-      "ComposeXfo.tr"
-      ],
-    "EmptyDrawingHandle.handle" : [
-      "DrawPolygonMesh.this"
-      ],
-    "DrawPolygonMesh.this" : [
-      "this"
-      ],
-    "PolygonMesh.result" : [
-      "AddCuboid.this"
-      ],
-    "AddCuboid.this" : [
-      "RecomputePointNormals.this"
-      ],
-    "Cache.value" : [
-      "DrawPolygonMesh.mesh"
+      "Xfo.tr"
       ],
     "MultiplyScalar_2.result" : [
-      "ComposeXfo.sc"
-      ],
-    "RecomputePointNormals.this" : [
-      "Cache.value"
+      "Xfo_2.tr"
       ]
     },
   "requiredPresets" : {
     "ThirdParty.RazerHydra.RazerHydraController.RazerHydraController" : {
       "objectType" : "Func",
+      "metadata" : {
+        "uiTooltip" : "\n\n Supported by RazerHydraController"
+        },
       "title" : "RazerHydraController",
       "ports" : [
         {
@@ -556,10 +690,14 @@
       "extDeps" : {
         "RazerHydra" : "*"
         },
+      "presetGUID" : "D4F95F8E393FF5D4B761DE1973876117",
       "code" : "require RazerHydra;\n\ndfgEntry {\n  result = RazerHydraController();\n}\n"
       },
     "ThirdParty.RazerHydra.RazerHydraController.Update" : {
       "objectType" : "Func",
+      "metadata" : {
+        "uiTooltip" : "\n\n Supported by RazerHydraController"
+        },
       "title" : "Update",
       "ports" : [
         {
@@ -580,10 +718,14 @@
       "extDeps" : {
         "RazerHydra" : "*"
         },
+      "presetGUID" : "1177907E39FE581AB88AD009DA3C53B0",
       "code" : "require RazerHydra;\n\ndfgEntry {\n  result = this.update();\n}\n"
       },
     "ThirdParty.RazerHydra.RazerHydraController.GetControl" : {
       "objectType" : "Func",
+      "metadata" : {
+        "uiTooltip" : "\n\n Supported by RazerHydraController"
+        },
       "title" : "GetControl",
       "ports" : [
         {
@@ -611,11 +753,12 @@
       "extDeps" : {
         "RazerHydra" : "*"
         },
+      "presetGUID" : "E0A7748994769101FD7B1563E3A9539D",
       "code" : "require RazerHydra;\n\ndfgEntry {\n  result = this.getControl(index);\n}\n"
       },
     "ThirdParty.RazerHydra.RazerHydraControllerData.DecomposeRazerHydraControllerData" : {
       "objectType" : "Func",
-      "title" : "DecomposeRazerHydraControllerData",
+      "title" : "RazerHydraControllerData ->",
       "ports" : [
         {
           "objectType" : "Port",
@@ -798,14 +941,16 @@
       "extDeps" : {
         "RazerHydra" : "*"
         },
-      "code" : "dfgEntry {\n  pos = value.pos;\n  rotMat = value.rot_mat;\n  joystickX = value.joystick_x;\n  joystickY = value.joystick_y;\n  trigger = value.trigger;\n  buttons = value.buttons;\n  sequenceNumber = value.sequence_number;\n  rotQuat = value.rot_quat;\n  firmwareRevision = value.firmware_revision;\n  hardwareRevision = value.hardware_revision;\n  packetType = value.packet_type;\n  magneticFrequency = value.magnetic_frequency;\n  enabled = value.enabled;\n  controllerIndex = value.controller_index;\n  isDocked = value.is_docked;\n  whichHand = value.which_hand;\n  hemiTrackingEnabled = value.hemi_tracking_enabled;\n}\n"
+      "presetGUID" : "530BA1BE1E3B472E46106BD69D45D280",
+      "code" : "require RazerHydra;\n\ndfgEntry {\n  pos = value.pos;\n  rotMat = value.rot_mat;\n  joystickX = value.joystick_x;\n  joystickY = value.joystick_y;\n  trigger = value.trigger;\n  buttons = value.buttons;\n  sequenceNumber = value.sequence_number;\n  rotQuat = value.rot_quat;\n  firmwareRevision = value.firmware_revision;\n  hardwareRevision = value.hardware_revision;\n  packetType = value.packet_type;\n  magneticFrequency = value.magnetic_frequency;\n  enabled = value.enabled;\n  controllerIndex = value.controller_index;\n  isDocked = value.is_docked;\n  whichHand = value.which_hand;\n  hemiTrackingEnabled = value.hemi_tracking_enabled;\n}\n"
       },
     "Fabric.Exts.Math.Xfo.ComposeXfo" : {
       "objectType" : "Func",
       "metadata" : {
-        "uiNodeColor" : "{\n  \"r\" : 99,\n  \"g\" : 129,\n  \"b\" : 92\n  }"
+        "uiNodeColor" : "{\n  \"r\" : 99,\n  \"g\" : 129,\n  \"b\" : 92\n  }",
+        "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/Math/Xfo.html"
         },
-      "title" : "ComposeXfo",
+      "title" : "-> Xfo",
       "ports" : [
         {
           "objectType" : "Port",
@@ -875,25 +1020,54 @@
       "extDeps" : {
         "Math" : "*"
         },
-      "code" : "dfgEntry {\n  result.ori = ori;\n  result.tr = tr;\n  result.sc = sc;\n}\n"
+      "presetGUID" : "C61287D19D84D9733903DDC14FABD4AF",
+      "code" : "require Math;\n\ndfgEntry {\n  result.ori = ori;\n  result.tr = tr;\n  result.sc = sc;\n}\n"
       },
-    "Fabric.Exts.Math.Vec3.MultiplyScalar" : {
+    "Fabric.Core.Math.Mul" : {
+      "objectType" : "Func",
+      "title" : "Mul",
+      "ports" : [
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "lhs",
+          "execPortType" : "In",
+          "typeSpec" : "$TYPE$"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "Out",
+          "name" : "rhs",
+          "execPortType" : "In",
+          "typeSpec" : "$TYPE$"
+          },
+        {
+          "objectType" : "Port",
+          "nodePortType" : "In",
+          "name" : "result",
+          "execPortType" : "Out",
+          "typeSpec" : "$TYPE$"
+          }
+        ],
+      "extDeps" : {},
+      "presetGUID" : "CC951B43BB879483B46EFF7965692350",
+      "code" : "\ndfgEntry {\n\tresult = lhs * rhs;\n}\n"
+      },
+    "Fabric.Exts.Math.Func.MultiplyScalar" : {
       "objectType" : "Func",
       "metadata" : {
         "uiNodeColor" : "{\n  \"r\" : 99,\n  \"g\" : 129,\n  \"b\" : 92\n  }",
-        "uiTooltip" : "Returns the product of this vector and a scalar"
+        "uiDocUrl" : "http://docs.fabric-engine.com/FabricEngine/2.0.0/HTML/KLExtensionsGuide/Math/RGB.html",
+        "uiTooltip" : "Returns the product of this RGB color and a scalar\n\n Supported by RGB,RGBA,ARGB,Color,Vec2,Vec3,Vec4,Mat22,Mat33,Mat44,Quat"
         },
       "title" : "MultiplyScalar",
       "ports" : [
         {
           "objectType" : "Port",
-          "metadata" : {
-            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 242,\n  \"b\" : 0\n  }"
-            },
           "nodePortType" : "Out",
           "name" : "this",
           "execPortType" : "In",
-          "typeSpec" : "Vec3"
+          "typeSpec" : "$TYPE$"
           },
         {
           "objectType" : "Port",
@@ -907,394 +1081,34 @@
           },
         {
           "objectType" : "Port",
-          "metadata" : {
-            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 242,\n  \"b\" : 0\n  }"
-            },
           "nodePortType" : "In",
           "name" : "result",
           "execPortType" : "Out",
-          "typeSpec" : "Vec3"
+          "typeSpec" : "$TYPE$"
           }
         ],
       "extDeps" : {
         "Math" : "*"
         },
+      "presetGUID" : "8EC64304FD2D82AEC7EBB545E4A9709B",
       "code" : "require Math;\n\ndfgEntry {\n  result = this.multiplyScalar(other);\n}\n"
-      },
-    "Fabric.Exts.InlineDrawing.DrawingHandle.EmptyDrawingHandle" : {
-      "objectType" : "Graph",
-      "title" : "EmptyDrawingHandle",
-      "cacheRule" : "never",
-      "ports" : [
-        {
-          "objectType" : "Port",
-          "nodePortType" : "In",
-          "name" : "handle",
-          "execPortType" : "Out",
-          "typeSpec" : "DrawingHandle"
-          }
-        ],
-      "extDeps" : {},
-      "nodes" : [
-        {
-          "objectType" : "Inst",
-          "name" : "DrawingHandle",
-          "ports" : [
-            {
-              "objectType" : "InstPort",
-              "nodePortType" : "In",
-              "name" : "name"
-              },
-            {
-              "objectType" : "InstPort",
-              "nodePortType" : "Out",
-              "name" : "result"
-              }
-            ],
-          "executable" : "Fabric.Exts.InlineDrawing.DrawingHandle.DrawingHandle"
-          },
-        {
-          "objectType" : "Inst",
-          "metadata" : {
-            "uiGraphPos" : "{\"x\": 894, \"y\": 100}"
-            },
-          "name" : "Clear",
-          "ports" : [
-            {
-              "objectType" : "InstPort",
-              "nodePortType" : "IO",
-              "name" : "this"
-              }
-            ],
-          "executable" : "Fabric.Exts.InlineDrawing.DrawingHandle.Clear",
-          "cacheRule" : "never"
-          },
-        {
-          "objectType" : "Var",
-          "metadata" : {
-            "uiGraphPos" : "{\"x\": 674, \"y\": 79}"
-            },
-          "name" : "handleVar",
-          "ports" : [
-            {
-              "objectType" : "VarPort",
-              "nodePortType" : "IO",
-              "name" : "value"
-              }
-            ],
-          "dataType" : "DrawingHandle",
-          "extDep" : "InlineDrawing:*"
-          }
-        ],
-      "connections" : {
-        "DrawingHandle.result" : [
-          "handleVar.value"
-          ],
-        "Clear.this" : [
-          "handle"
-          ],
-        "handleVar.value" : [
-          "Clear.this"
-          ]
-        }
-      },
-    "Fabric.Exts.InlineDrawing.DrawingHandle.DrawingHandle" : {
-      "objectType" : "Func",
-      "metadata" : {
-        "uiTooltip" : "constructor taking a name for the root transform of this drawing handle"
-        },
-      "title" : "DrawingHandle",
-      "ports" : [
-        {
-          "objectType" : "Port",
-          "nodePortType" : "Out",
-          "name" : "name",
-          "execPortType" : "In",
-          "typeSpec" : "String"
-          },
-        {
-          "objectType" : "Port",
-          "nodePortType" : "In",
-          "name" : "result",
-          "execPortType" : "Out",
-          "typeSpec" : "DrawingHandle"
-          }
-        ],
-      "extDeps" : {
-        "InlineDrawing" : "*"
-        },
-      "code" : "require InlineDrawing;\n\ndfgEntry {\n  result = DrawingHandle(name);\n}\n"
-      },
-    "Fabric.Exts.InlineDrawing.DrawingHandle.Clear" : {
-      "objectType" : "Func",
-      "metadata" : {
-        "uiTooltip" : "removes all contents from the DrawingHandle"
-        },
-      "title" : "Clear",
-      "ports" : [
-        {
-          "objectType" : "Port",
-          "nodePortType" : "IO",
-          "name" : "this",
-          "execPortType" : "IO",
-          "typeSpec" : "DrawingHandle"
-          }
-        ],
-      "extDeps" : {
-        "InlineDrawing" : "*"
-        },
-      "code" : "require InlineDrawing;\n\ndfgEntry {\n  this.clear();\n}\n"
-      },
-    "Fabric.Exts.InlineDrawing.DrawingHandle.DrawPolygonMesh" : {
-      "objectType" : "Func",
-      "metadata" : {
-        "uiTooltip" : "helper function to draw a mesh given a color + a single transform"
-        },
-      "title" : "DrawPolygonMesh",
-      "ports" : [
-        {
-          "objectType" : "Port",
-          "nodePortType" : "IO",
-          "name" : "this",
-          "execPortType" : "IO",
-          "typeSpec" : "DrawingHandle"
-          },
-        {
-          "objectType" : "Port",
-          "nodePortType" : "Out",
-          "name" : "name",
-          "execPortType" : "In",
-          "typeSpec" : "String"
-          },
-        {
-          "objectType" : "Port",
-          "metadata" : {
-            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 0,\n  \"b\" : 0\n  }"
-            },
-          "nodePortType" : "Out",
-          "defaultValues" : {
-            "Color" : {
-              "r" : 0,
-              "g" : 1,
-              "b" : 0,
-              "a" : 1
-              }
-            },
-          "name" : "color",
-          "execPortType" : "In",
-          "typeSpec" : "Color"
-          },
-        {
-          "objectType" : "Port",
-          "metadata" : {
-            "uiColor" : "{\n  \"r\" : 249,\n  \"g\" : 157,\n  \"b\" : 28\n  }"
-            },
-          "nodePortType" : "Out",
-          "name" : "transform",
-          "execPortType" : "In",
-          "typeSpec" : "Xfo"
-          },
-        {
-          "objectType" : "Port",
-          "metadata" : {
-            "uiColor" : "{\n  \"r\" : 51,\n  \"g\" : 1,\n  \"b\" : 106\n  }"
-            },
-          "nodePortType" : "Out",
-          "name" : "mesh",
-          "execPortType" : "In",
-          "typeSpec" : "PolygonMesh"
-          },
-        {
-          "objectType" : "Port",
-          "nodePortType" : "Out",
-          "name" : "wireFrame",
-          "execPortType" : "In",
-          "typeSpec" : "Boolean"
-          },
-        {
-          "objectType" : "Port",
-          "metadata" : {
-            "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 242,\n  \"b\" : 0\n  }"
-            },
-          "nodePortType" : "In",
-          "name" : "dummyResult",
-          "execPortType" : "Out",
-          "typeSpec" : "Vec3"
-          },
-        {
-          "objectType" : "Port",
-          "nodePortType" : "In",
-          "name" : "instance",
-          "execPortType" : "Out",
-          "typeSpec" : "InlineInstance"
-          }
-        ],
-      "extDeps" : {
-        "InlineDrawing" : "*"
-        },
-      "code" : "require InlineDrawing;\n\ndfgEntry {\n  this.drawPolygonMesh(name, color, transform, mesh, wireFrame, dummyResult, instance);\n}\n"
-      },
-    "Fabric.Exts.Geometry.PolygonMesh.PolygonMesh" : {
-      "objectType" : "Func",
-      "metadata" : {
-        "uiTooltip" : "Constructor."
-        },
-      "title" : "PolygonMesh",
-      "ports" : [
-        {
-          "objectType" : "Port",
-          "nodePortType" : "Out",
-          "name" : "float64Positions",
-          "execPortType" : "In",
-          "typeSpec" : "Boolean"
-          },
-        {
-          "objectType" : "Port",
-          "metadata" : {
-            "uiColor" : "{\n  \"r\" : 51,\n  \"g\" : 1,\n  \"b\" : 106\n  }"
-            },
-          "nodePortType" : "In",
-          "name" : "result",
-          "execPortType" : "Out",
-          "typeSpec" : "PolygonMesh"
-          }
-        ],
-      "extDeps" : {
-        "Geometry" : "*"
-        },
-      "code" : "require Geometry;\n\ndfgEntry {\n  result = PolygonMesh(float64Positions);\n}\n"
-      },
-    "Fabric.Exts.Geometry.PolygonMesh.AddCuboid" : {
-      "objectType" : "Func",
-      "metadata" : {
-        "uiTooltip" : "Appends a transformed cuboid (cube with specified size) to this mesh.\nBefore applying the transformation, the cuboid is centered at the origin,\nand has a range of [-x/2 .. x/2, -y/2 .. y/2, -z/2 .. z/2].\n\n"
-        },
-      "title" : "AddCuboid",
-      "ports" : [
-        {
-          "objectType" : "Port",
-          "metadata" : {
-            "uiColor" : "{\n  \"r\" : 51,\n  \"g\" : 1,\n  \"b\" : 106\n  }"
-            },
-          "nodePortType" : "IO",
-          "name" : "this",
-          "execPortType" : "IO",
-          "typeSpec" : "PolygonMesh"
-          },
-        {
-          "objectType" : "Port",
-          "metadata" : {
-            "uiColor" : "{\n  \"r\" : 249,\n  \"g\" : 157,\n  \"b\" : 28\n  }"
-            },
-          "nodePortType" : "Out",
-          "name" : "xfo",
-          "execPortType" : "In",
-          "typeSpec" : "Xfo"
-          },
-        {
-          "objectType" : "Port",
-          "nodePortType" : "Out",
-          "name" : "x",
-          "execPortType" : "In",
-          "typeSpec" : "Scalar"
-          },
-        {
-          "objectType" : "Port",
-          "nodePortType" : "Out",
-          "name" : "y",
-          "execPortType" : "In",
-          "typeSpec" : "Scalar"
-          },
-        {
-          "objectType" : "Port",
-          "nodePortType" : "Out",
-          "name" : "z",
-          "execPortType" : "In",
-          "typeSpec" : "Scalar"
-          }
-        ],
-      "extDeps" : {
-        "Geometry" : "*"
-        },
-      "code" : "require Geometry;\n\ndfgEntry {\n  this.addCuboid(xfo, x, y, z);\n}\n"
-      },
-    "Fabric.Core.Data.Cache" : {
-      "objectType" : "Func",
-      "metadata" : {
-        "uiNodeColor" : "{\n  \"r\" : 214,\n  \"g\" : 191,\n  \"b\" : 103\n  }",
-        "uiHeaderColor" : "{\n  \"r\" : 188,\n  \"g\" : 129,\n  \"b\" : 83\n  }"
-        },
-      "title" : "Cache",
-      "cacheRule" : "always",
-      "ports" : [
-        {
-          "objectType" : "Port",
-          "nodePortType" : "Out",
-          "name" : "value",
-          "execPortType" : "In",
-          "typeSpec" : "$TYPE$"
-          }
-        ],
-      "extDeps" : {},
-      "code" : "dfgEntry {\n}\n"
-      },
-    "Fabric.Exts.Geometry.PolygonMesh.RecomputePointNormals" : {
-      "objectType" : "Func",
-      "metadata" : {
-        "uiTooltip" : "Recomputes all point normals and introduces normal splits if adjacent polygons' normals differ by more than `hardAngleRadians` radians.\nAll previously stored point normals will be overwritten.\nThe computed normal value is the average of neighbor polygons' :kl-ref:`PolygonMesh.generatePolygonNormal` (or a subset of these if there is a split)."
-        },
-      "title" : "RecomputePointNormals",
-      "ports" : [
-        {
-          "objectType" : "Port",
-          "metadata" : {
-            "uiColor" : "{\n  \"r\" : 51,\n  \"g\" : 1,\n  \"b\" : 106\n  }"
-            },
-          "nodePortType" : "IO",
-          "name" : "this",
-          "execPortType" : "IO",
-          "typeSpec" : "PolygonMesh"
-          },
-        {
-          "objectType" : "Port",
-          "nodePortType" : "Out",
-          "name" : "hardAngleRadians",
-          "execPortType" : "In",
-          "typeSpec" : "Scalar"
-          }
-        ],
-      "extDeps" : {
-        "Geometry" : "*"
-        },
-      "code" : "require Geometry;\n\ndfgEntry {\n  this.recomputePointNormals(hardAngleRadians);\n}\n"
       }
     },
   "args" : [
-    {
-      "type" : "Float32",
-      "value" : 22
-      },
-    {
-      "type" : "Vec3",
-      "value" : {
-        "x" : -50.52060317993164,
-        "y" : -15.77592468261719,
-        "z" : 36.70828247070313
-        },
-      "ext" : "Math"
-      },
-    {
-      "type" : "Float32",
-      "value" : 0
-      },
-    {
-      "type" : "DrawingHandle",
-      "value" : null,
-      "ext" : "InlineDrawing"
-      },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
     {
       "type" : "Float32",
       "value" : 0.1000000014901161
-      }
+      },
+    null
     ]
   }
