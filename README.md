@@ -7,7 +7,7 @@ RazerHydra allows you to read the device tracking information as well as getting
 extension status
 ================
 
-This extension has been built and tested against Fabric Engine 1.14. Higher release might work, but this hasn't been validated. Feel free to use this code for reference or training purposes, it's meant to be an example of how to integrate custom libraries into KL.
+This extension has been built and tested against Fabric Engine 2.0.0. Higher release might work, but this hasn't been validated. Feel free to use this code for reference or training purposes, it's meant to be an example of how to integrate custom libraries into KL.
 
 structure
 =========
@@ -16,11 +16,13 @@ The RazerHydra extension uses the KL2EDK tool to generate the required C++ heade
 
 The latest KL2EDK documentation can be found here: http://documentation.fabricengine.com/FabricEngine/latest/HTML/ExtensionAuthoringGuide/kl2edk.html
 
+Additional it uses KL2DFG to generate Canvas presets for each function of the API. These can be found in the stage output folder after building.
+
 supported platforms
 ===================
 
 RazerHydra is currently only supported on Windows.
-For Fabric Engine 1.14 the extension has to be built using Visual Studio 2010 (through scons). For future versions VS 2013 might be used.
+For Fabric Engine 2.0.0 the extension has to be built using Visual Studio 2010 (through scons), since the Sixense SDK is built with 2010.
 
 building
 ========
@@ -39,19 +41,25 @@ To inform scons where to find the Fabric Engine includes as well as the thirdpar
 
 The temporary files will be built into the *build* folder, while the structured output files will be placed in the *stage* folder. Optionally you can define the FABRIC_EXTS_INSTALL_DIR environment variable, to which the extension will be installed.
 
-Note: The fabric.sh exists purely for Fabric Engine internal use.
+To build the extension you need to be in an Fabric Engine enabled shell, define the mentioned environment variables (FABRIC_DIR) will already be defined, and type
 
-testing
-=======
+    scons
 
-The extension repository also contains a series of unit tests, with which you can validate a successful build, or simply use them for reference on how to use the extension. to launch all unit tests simply use python like this:
+Note: The build-env.sh exists purely for Fabric Engine internal use, but you can use it as a guide for your own build setup.
 
-    python test/test_all.py
+usage in canvas
+==================
+
+To use the extension inside of Canvas, simply cd into the repo's root folder and source deploy.sh
+
+    cd RazerHydra && deploy.sh
+
+You can of course add this to your .bashrc file, for example. Alternatively inspect deploy.sh to see the required environment variables.
 
 samples
 =======
 
-The splice files in the samples folder can be run with the splice standalone command line tool. Some samples might require Fabric Engine 1.14.
+The Canvas sample files in the canvas folder can be run with the canvas standalone command line tool.
 
 license
 ==========

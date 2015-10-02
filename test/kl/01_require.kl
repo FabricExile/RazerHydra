@@ -1,5 +1,0 @@
-require RazerHydra;
-
-operator entry() {
-  report('completed!'); 
-}
