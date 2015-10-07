@@ -1,0 +1,29 @@
+// Created by kl2dfg (processFunction)
+{
+  "objectType" : "Func",
+  "metadata" : {
+    "uiTooltip" : "\n\n Supported by RazerHydraController"
+    },
+  "title" : "ReadyForMotion",
+  "ports" : [
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "this",
+      "execPortType" : "In",
+      "typeSpec" : "RazerHydraController"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "result",
+      "execPortType" : "Out",
+      "typeSpec" : "Boolean"
+      }
+    ],
+  "extDeps" : {
+    "RazerHydra" : "*"
+    },
+  "presetGUID" : "F513A232903208F0E8DBA9D56C8AE8CB",
+  "code" : "require RazerHydra;\n\ndfgEntry {\n  result = this.readyForMotion();\n}\n"
+  }

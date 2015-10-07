@@ -1,0 +1,36 @@
+// Created by kl2dfg (processFunction)
+{
+  "objectType" : "Func",
+  "metadata" : {
+    "uiTooltip" : "\n\n Supported by RazerHydraController"
+    },
+  "title" : "GetHighPriorityBindingEnabled",
+  "ports" : [
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "this",
+      "execPortType" : "In",
+      "typeSpec" : "RazerHydraController"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "IO",
+      "name" : "onOrOff",
+      "execPortType" : "IO",
+      "typeSpec" : "SInt32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "result",
+      "execPortType" : "Out",
+      "typeSpec" : "Boolean"
+      }
+    ],
+  "extDeps" : {
+    "RazerHydra" : "*"
+    },
+  "presetGUID" : "A69FE970A9966F7601A31DE3E446CE24",
+  "code" : "require RazerHydra;\n\ndfgEntry {\n  result = this.getHighPriorityBindingEnabled(onOrOff);\n}\n"
+  }

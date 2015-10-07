@@ -1,0 +1,36 @@
+// Created by kl2dfg (processFunction)
+{
+  "objectType" : "Func",
+  "metadata" : {
+    "uiTooltip" : "\n\n Supported by RazerHydraController"
+    },
+  "title" : "SetFilterEnabled",
+  "ports" : [
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "this",
+      "execPortType" : "In",
+      "typeSpec" : "RazerHydraController"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "onOrOff",
+      "execPortType" : "In",
+      "typeSpec" : "SInt32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "result",
+      "execPortType" : "Out",
+      "typeSpec" : "Boolean"
+      }
+    ],
+  "extDeps" : {
+    "RazerHydra" : "*"
+    },
+  "presetGUID" : "DE0F916F0207124786DC94B6AE1BD2C6",
+  "code" : "require RazerHydra;\n\ndfgEntry {\n  result = this.setFilterEnabled(onOrOff);\n}\n"
+  }

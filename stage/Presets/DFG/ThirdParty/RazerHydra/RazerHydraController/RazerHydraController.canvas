@@ -1,0 +1,22 @@
+// Created by kl2dfg (processFunction)
+{
+  "objectType" : "Func",
+  "metadata" : {
+    "uiTooltip" : "\n\n Supported by RazerHydraController"
+    },
+  "title" : "RazerHydraController",
+  "ports" : [
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "result",
+      "execPortType" : "Out",
+      "typeSpec" : "RazerHydraController"
+      }
+    ],
+  "extDeps" : {
+    "RazerHydra" : "*"
+    },
+  "presetGUID" : "D4F95F8E393FF5D4B761DE1973876117",
+  "code" : "require RazerHydra;\n\ndfgEntry {\n  result = RazerHydraController();\n}\n"
+  }

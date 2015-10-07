@@ -1,0 +1,19 @@
+// Created by kl2dfg (processConstant)
+{
+  "objectType" : "Func",
+  "title" : "SIXENSE_MAX_CONTROLLERS",
+  "ports" : [
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "value",
+      "execPortType" : "Out",
+      "typeSpec" : "SInt32"
+      }
+    ],
+  "extDeps" : {
+    "RazerHydra" : "*"
+    },
+  "presetGUID" : "F10D6ADD0618036C82738E4ACC1644A1",
+  "code" : "require RazerHydra;\n\ndfgEntry {\n  value = SIXENSE_MAX_CONTROLLERS;\n}\n"
+  }

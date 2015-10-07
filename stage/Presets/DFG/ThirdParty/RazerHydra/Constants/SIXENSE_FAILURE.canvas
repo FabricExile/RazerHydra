@@ -1,0 +1,19 @@
+// Created by kl2dfg (processConstant)
+{
+  "objectType" : "Func",
+  "title" : "SIXENSE_FAILURE",
+  "ports" : [
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "value",
+      "execPortType" : "Out",
+      "typeSpec" : "SInt32"
+      }
+    ],
+  "extDeps" : {
+    "RazerHydra" : "*"
+    },
+  "presetGUID" : "E27C3CA3D0B1733A7C65660B42A25FB4",
+  "code" : "require RazerHydra;\n\ndfgEntry {\n  value = SIXENSE_FAILURE;\n}\n"
+  }

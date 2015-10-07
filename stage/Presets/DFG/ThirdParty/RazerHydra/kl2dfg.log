@@ -1,0 +1,35 @@
+[FABRIC:MT] Fabric Engine version 2.1.0-dev
+[FABRIC:MT] Loading DFG presets from e:\arbus\stage\Windows\x86_64\Release\Presets\DFG
+[FABRIC:MT] Loading DFG presets from c:\Users\helge\Fabric\Presets
+[FABRIC:MT] Registered extensions {Alembic:1.0.0,AlembicWrapper:1.2.0,Animation:1.1.0,Bullet:1.0.1,BulletHelpers:1.0.0,Characters:1.1.0,Containers:1.1.0,DFGHelpers,FabricInterfaces:1.0.1,FabricSynchronization:1.1.0,Fbx:1.1.0,FbxHelpers:1.0.2,FileIO:1.2.0,Geometry:1.2.0,Images:1.0.2,InlineDrawing:1.2.0,JSON:1.0.0,Manipulation:1.1.0,Math:1.2.0,FabricOBJ:1.1.0,FabricOGL:1.0.0,OpenImageIO:1.0.2,OSOGL:1.1.0,Parameters:1.0.0,Singletons:1.1.0,FabricStatistics:1.1.0,Util:1.1.0,ImageProcessing,RTR,RTRAdaptors} in directory: e:\arbus\stage\Windows\x86_64\Release\Exts
+[FABRIC:MT] Registered extensions {BadCode:2.1.0,BadInline:2.1.0,BadPrototype:2.1.0,BadVersion:2.1.0,CircularA:2.1.0,CircularB:2.1.0,FwdDeclare:2.1.0,FwdDeclNoDef:2.1.0,SetupCallback:2.1.0,UnitTest:2.1.0,VersionTest:1.0.0,VersionTest:1.1.1,VersionTest:1.2.1} in directory: e:\arbus\stage\Windows\x86_64\Release\Tests\Core\Exts
+[FABRIC:MT] Ignored extension directory 'e:\arbus\stage\Windows\x86_64\Release\Tests\Exts': unable to open directory 'e:\arbus\stage\Windows\x86_64\Release\Tests\Exts': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] Registered extension {RazerHydra:1.0.0} in directory: stage\Exts
+[FABRIC:MT] IRCache: Not pruning since last prune was less than 24 hours ago
+[FABRIC:MT] Loaded extension Math in 138.609ms (cached)
+[FABRIC:MT] Loaded extension RazerHydra in 138.478ms (cached)
+Registered function 'RazerHydraController.RazerHydraController', 'RazerHydraController.RazerHydraController'.
+Registered function 'RazerHydraController.autoEnableHemisphereTracking', 'autoEnableHemisphereTracking'.
+Registered function 'RazerHydraController.getBaseColor', 'getBaseColor'.
+Registered function 'RazerHydraController.getControl', 'getControl'.
+Registered function 'RazerHydraController.getFilterEnabled', 'getFilterEnabled'.
+Registered function 'RazerHydraController.getFilterParams', 'getFilterParams'.
+Registered function 'RazerHydraController.getHemisphereTrackingMode', 'getHemisphereTrackingMode'.
+Registered function 'RazerHydraController.getHighPriorityBindingEnabled', 'getHighPriorityBindingEnabled'.
+Registered function 'RazerHydraController.getHistorySize', 'getHistorySize'.
+Registered function 'RazerHydraController.getMaxBases', 'getMaxBases'.
+Registered function 'RazerHydraController.getMaxControllers', 'getMaxControllers'.
+Registered function 'RazerHydraController.getNumActiveControllers', 'getNumActiveControllers'.
+Registered function 'RazerHydraController.isBaseConnected', 'isBaseConnected'.
+Registered function 'RazerHydraController.isControllerEnabled', 'isControllerEnabled'.
+Registered function 'RazerHydraController.readyForMotion', 'readyForMotion'.
+Registered function 'RazerHydraController.setActiveBase', 'setActiveBase'.
+Registered function 'RazerHydraController.setBaseColor', 'setBaseColor'.
+Registered function 'RazerHydraController.setFilterEnabled', 'setFilterEnabled'.
+Registered function 'RazerHydraController.setFilterParams', 'setFilterParams'.
+Registered function 'RazerHydraController.setHemisphereTrackingMode', 'setHemisphereTrackingMode'.
+Registered function 'RazerHydraController.setHighPriorityBindingEnabled', 'setHighPriorityBindingEnabled'.
+Registered function 'RazerHydraController.triggerVibration', 'triggerVibration'.
+Registered function 'RazerHydraController.update', 'update'.
+Registered function 'RazerHydraController.valid', 'valid'.
+Registered function 'RazerHydraController.~RazerHydraController', '~RazerHydraController'.

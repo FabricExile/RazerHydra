@@ -1,0 +1,189 @@
+// Created by kl2dfg (processDecomposeFunction)
+{
+  "objectType" : "Func",
+  "title" : "RazerHydraControllerData ->",
+  "ports" : [
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "RazerHydraControllerData" : {
+          "pos" : {
+            "x" : 0,
+            "y" : 0,
+            "z" : 0
+            },
+          "rot_mat" : {
+            "row0" : {
+              "x" : 1,
+              "y" : 0,
+              "z" : 0
+              },
+            "row1" : {
+              "x" : 0,
+              "y" : 1,
+              "z" : 0
+              },
+            "row2" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 1
+              }
+            },
+          "joystick_x" : 0,
+          "joystick_y" : 0,
+          "trigger" : 0,
+          "buttons" : 0,
+          "sequence_number" : 0,
+          "rot_quat" : {
+            "v" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 0
+              },
+            "w" : 1
+            },
+          "firmware_revision" : 0,
+          "hardware_revision" : 0,
+          "packet_type" : 0,
+          "magnetic_frequency" : 0,
+          "enabled" : 0,
+          "controller_index" : 0,
+          "is_docked" : 0,
+          "which_hand" : 0,
+          "hemi_tracking_enabled" : 0
+          }
+        },
+      "name" : "value",
+      "execPortType" : "In",
+      "typeSpec" : "RazerHydraControllerData"
+      },
+    {
+      "objectType" : "Port",
+      "metadata" : {
+        "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 242,\n  \"b\" : 0\n  }"
+        },
+      "nodePortType" : "In",
+      "name" : "pos",
+      "execPortType" : "Out",
+      "typeSpec" : "Vec3"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "rotMat",
+      "execPortType" : "Out",
+      "typeSpec" : "Mat33"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "joystickX",
+      "execPortType" : "Out",
+      "typeSpec" : "Float32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "joystickY",
+      "execPortType" : "Out",
+      "typeSpec" : "Float32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "trigger",
+      "execPortType" : "Out",
+      "typeSpec" : "Float32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "buttons",
+      "execPortType" : "Out",
+      "typeSpec" : "UInt32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "sequenceNumber",
+      "execPortType" : "Out",
+      "typeSpec" : "UInt8"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "rotQuat",
+      "execPortType" : "Out",
+      "typeSpec" : "Quat"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "firmwareRevision",
+      "execPortType" : "Out",
+      "typeSpec" : "UInt16"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "hardwareRevision",
+      "execPortType" : "Out",
+      "typeSpec" : "UInt16"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "packetType",
+      "execPortType" : "Out",
+      "typeSpec" : "UInt16"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "magneticFrequency",
+      "execPortType" : "Out",
+      "typeSpec" : "UInt16"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "enabled",
+      "execPortType" : "Out",
+      "typeSpec" : "SInt32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "controllerIndex",
+      "execPortType" : "Out",
+      "typeSpec" : "SInt32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "isDocked",
+      "execPortType" : "Out",
+      "typeSpec" : "UInt8"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "whichHand",
+      "execPortType" : "Out",
+      "typeSpec" : "UInt8"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "hemiTrackingEnabled",
+      "execPortType" : "Out",
+      "typeSpec" : "UInt8"
+      }
+    ],
+  "extDeps" : {
+    "RazerHydra" : "*"
+    },
+  "presetGUID" : "530BA1BE1E3B472E46106BD69D45D280",
+  "code" : "require RazerHydra;\n\ndfgEntry {\n  pos = value.pos;\n  rotMat = value.rot_mat;\n  joystickX = value.joystick_x;\n  joystickY = value.joystick_y;\n  trigger = value.trigger;\n  buttons = value.buttons;\n  sequenceNumber = value.sequence_number;\n  rotQuat = value.rot_quat;\n  firmwareRevision = value.firmware_revision;\n  hardwareRevision = value.hardware_revision;\n  packetType = value.packet_type;\n  magneticFrequency = value.magnetic_frequency;\n  enabled = value.enabled;\n  controllerIndex = value.controller_index;\n  isDocked = value.is_docked;\n  whichHand = value.which_hand;\n  hemiTrackingEnabled = value.hemi_tracking_enabled;\n}\n"
+  }

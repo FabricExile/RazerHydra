@@ -1,0 +1,19 @@
+// Created by kl2dfg (processConstant)
+{
+  "objectType" : "Func",
+  "title" : "SIXENSE_BUTTON_4",
+  "ports" : [
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "value",
+      "execPortType" : "Out",
+      "typeSpec" : "SInt32"
+      }
+    ],
+  "extDeps" : {
+    "RazerHydra" : "*"
+    },
+  "presetGUID" : "1D27398898D7B25E230BF6605C44A999",
+  "code" : "require RazerHydra;\n\ndfgEntry {\n  value = SIXENSE_BUTTON_4;\n}\n"
+  }

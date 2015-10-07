@@ -1,0 +1,19 @@
+// Created by kl2dfg (processConstant)
+{
+  "objectType" : "Func",
+  "title" : "SIXENSE_BUTTON_BUMPER",
+  "ports" : [
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "value",
+      "execPortType" : "Out",
+      "typeSpec" : "SInt32"
+      }
+    ],
+  "extDeps" : {
+    "RazerHydra" : "*"
+    },
+  "presetGUID" : "A28D656C26CA57134B13CC1F064A4598",
+  "code" : "require RazerHydra;\n\ndfgEntry {\n  value = SIXENSE_BUTTON_BUMPER;\n}\n"
+  }

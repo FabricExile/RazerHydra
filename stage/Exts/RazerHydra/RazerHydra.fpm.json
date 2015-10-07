@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "libs": [
+    "RazerHydra"
+  ],
+  "code": [
+    "RazerHydraController.kl"
+  ]
+}

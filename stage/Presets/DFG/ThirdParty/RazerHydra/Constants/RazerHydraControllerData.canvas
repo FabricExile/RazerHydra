@@ -1,0 +1,70 @@
+// Created by kl2dfg (processStructConstant)
+{
+  "objectType" : "Func",
+  "metadata" : {
+    "uiAlwaysShowDaisyChainPorts" : "true"
+    },
+  "title" : "RazerHydraControllerData",
+  "ports" : [
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "RazerHydraControllerData" : {
+          "pos" : {
+            "x" : 0,
+            "y" : 0,
+            "z" : 0
+            },
+          "rot_mat" : {
+            "row0" : {
+              "x" : 1,
+              "y" : 0,
+              "z" : 0
+              },
+            "row1" : {
+              "x" : 0,
+              "y" : 1,
+              "z" : 0
+              },
+            "row2" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 1
+              }
+            },
+          "joystick_x" : 0,
+          "joystick_y" : 0,
+          "trigger" : 0,
+          "buttons" : 0,
+          "sequence_number" : 0,
+          "rot_quat" : {
+            "v" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 0
+              },
+            "w" : 1
+            },
+          "firmware_revision" : 0,
+          "hardware_revision" : 0,
+          "packet_type" : 0,
+          "magnetic_frequency" : 0,
+          "enabled" : 0,
+          "controller_index" : 0,
+          "is_docked" : 0,
+          "which_hand" : 0,
+          "hemi_tracking_enabled" : 0
+          }
+        },
+      "name" : "value",
+      "execPortType" : "In",
+      "typeSpec" : "RazerHydraControllerData"
+      }
+    ],
+  "extDeps" : {
+    "RazerHydra" : "*"
+    },
+  "presetGUID" : "BA9F7160D12E506DA3FEB6231CA058EA",
+  "code" : "dfgEntry {\n}\n"
+  }

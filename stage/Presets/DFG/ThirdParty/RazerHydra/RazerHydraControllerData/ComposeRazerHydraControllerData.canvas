@@ -1,0 +1,219 @@
+// Created by kl2dfg (processComposeFunction)
+{
+  "objectType" : "Func",
+  "title" : "-> RazerHydraControllerData",
+  "ports" : [
+    {
+      "objectType" : "Port",
+      "metadata" : {
+        "uiColor" : "{\n  \"r\" : 255,\n  \"g\" : 242,\n  \"b\" : 0\n  }"
+        },
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "Vec3" : {
+          "x" : 0,
+          "y" : 0,
+          "z" : 0
+          }
+        },
+      "name" : "pos",
+      "execPortType" : "In",
+      "typeSpec" : "Vec3"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "Mat33" : {
+          "row0" : {
+            "x" : 1,
+            "y" : 0,
+            "z" : 0
+            },
+          "row1" : {
+            "x" : 0,
+            "y" : 1,
+            "z" : 0
+            },
+          "row2" : {
+            "x" : 0,
+            "y" : 0,
+            "z" : 1
+            }
+          }
+        },
+      "name" : "rotMat",
+      "execPortType" : "In",
+      "typeSpec" : "Mat33"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "Float32" : 0
+        },
+      "name" : "joystickX",
+      "execPortType" : "In",
+      "typeSpec" : "Float32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "Float32" : 0
+        },
+      "name" : "joystickY",
+      "execPortType" : "In",
+      "typeSpec" : "Float32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "Float32" : 0
+        },
+      "name" : "trigger",
+      "execPortType" : "In",
+      "typeSpec" : "Float32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "UInt32" : 0
+        },
+      "name" : "buttons",
+      "execPortType" : "In",
+      "typeSpec" : "UInt32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "UInt8" : 0
+        },
+      "name" : "sequenceNumber",
+      "execPortType" : "In",
+      "typeSpec" : "UInt8"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "Quat" : {
+          "v" : {
+            "x" : 0,
+            "y" : 0,
+            "z" : 0
+            },
+          "w" : 1
+          }
+        },
+      "name" : "rotQuat",
+      "execPortType" : "In",
+      "typeSpec" : "Quat"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "UInt16" : 0
+        },
+      "name" : "firmwareRevision",
+      "execPortType" : "In",
+      "typeSpec" : "UInt16"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "UInt16" : 0
+        },
+      "name" : "hardwareRevision",
+      "execPortType" : "In",
+      "typeSpec" : "UInt16"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "UInt16" : 0
+        },
+      "name" : "packetType",
+      "execPortType" : "In",
+      "typeSpec" : "UInt16"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "UInt16" : 0
+        },
+      "name" : "magneticFrequency",
+      "execPortType" : "In",
+      "typeSpec" : "UInt16"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "SInt32" : 0
+        },
+      "name" : "enabled",
+      "execPortType" : "In",
+      "typeSpec" : "SInt32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "SInt32" : 0
+        },
+      "name" : "controllerIndex",
+      "execPortType" : "In",
+      "typeSpec" : "SInt32"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "UInt8" : 0
+        },
+      "name" : "isDocked",
+      "execPortType" : "In",
+      "typeSpec" : "UInt8"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "UInt8" : 0
+        },
+      "name" : "whichHand",
+      "execPortType" : "In",
+      "typeSpec" : "UInt8"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "defaultValues" : {
+        "UInt8" : 0
+        },
+      "name" : "hemiTrackingEnabled",
+      "execPortType" : "In",
+      "typeSpec" : "UInt8"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "result",
+      "execPortType" : "Out",
+      "typeSpec" : "RazerHydraControllerData"
+      }
+    ],
+  "extDeps" : {
+    "RazerHydra" : "*"
+    },
+  "presetGUID" : "FB62139CFE643AEC418FC0B028574A8C",
+  "code" : "require RazerHydra;\n\ndfgEntry {\n  result.pos = pos;\n  result.rot_mat = rotMat;\n  result.joystick_x = joystickX;\n  result.joystick_y = joystickY;\n  result.trigger = trigger;\n  result.buttons = buttons;\n  result.sequence_number = sequenceNumber;\n  result.rot_quat = rotQuat;\n  result.firmware_revision = firmwareRevision;\n  result.hardware_revision = hardwareRevision;\n  result.packet_type = packetType;\n  result.magnetic_frequency = magneticFrequency;\n  result.enabled = enabled;\n  result.controller_index = controllerIndex;\n  result.is_docked = isDocked;\n  result.which_hand = whichHand;\n  result.hemi_tracking_enabled = hemiTrackingEnabled;\n}\n"
+  }
