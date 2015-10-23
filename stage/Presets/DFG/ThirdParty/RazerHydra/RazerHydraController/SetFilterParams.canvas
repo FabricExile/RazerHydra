@@ -16,28 +16,28 @@
     {
       "objectType" : "Port",
       "nodePortType" : "Out",
-      "name" : "nearRange",
+      "name" : "near_range",
       "execPortType" : "In",
       "typeSpec" : "Float32"
       },
     {
       "objectType" : "Port",
       "nodePortType" : "Out",
-      "name" : "nearVal",
+      "name" : "near_val",
       "execPortType" : "In",
       "typeSpec" : "Float32"
       },
     {
       "objectType" : "Port",
       "nodePortType" : "Out",
-      "name" : "farRange",
+      "name" : "far_range",
       "execPortType" : "In",
       "typeSpec" : "Float32"
       },
     {
       "objectType" : "Port",
       "nodePortType" : "Out",
-      "name" : "farVal",
+      "name" : "far_val",
       "execPortType" : "In",
       "typeSpec" : "Float32"
       },
@@ -56,7 +56,7 @@
   "code" : "require RazerHydra;
 
 dfgEntry {
-  result = this.setFilterParams(nearRange, nearVal, farRange, farVal);
+  result = this.setFilterParams(near_range, near_val, far_range, far_val);
 }
 "
   }
