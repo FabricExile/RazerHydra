@@ -46,5 +46,10 @@
     "RazerHydra" : "*"
     },
   "presetGUID" : "DE5A3143202D76061F57628572ED5805",
-  "code" : "require RazerHydra;\n\ndfgEntry {\n  result = this.getBaseColor(red, green, blue);\n}\n"
+  "code" : "require RazerHydra;
+
+dfgEntry {
+  result = this.getBaseColor(red, green, blue);
+}
+"
   }

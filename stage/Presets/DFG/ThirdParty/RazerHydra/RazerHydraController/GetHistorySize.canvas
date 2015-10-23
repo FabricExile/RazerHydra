@@ -25,5 +25,10 @@
     "RazerHydra" : "*"
     },
   "presetGUID" : "0DE20CE523B177B9482AED0063C33277",
-  "code" : "require RazerHydra;\n\ndfgEntry {\n  result = this.getHistorySize();\n}\n"
+  "code" : "require RazerHydra;
+
+dfgEntry {
+  result = this.getHistorySize();
+}
+"
   }

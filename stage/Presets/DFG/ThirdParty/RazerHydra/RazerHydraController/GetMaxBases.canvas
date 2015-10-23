@@ -25,5 +25,10 @@
     "RazerHydra" : "*"
     },
   "presetGUID" : "13361551D246A9DF30043EC612C999F1",
-  "code" : "require RazerHydra;\n\ndfgEntry {\n  result = this.getMaxBases();\n}\n"
+  "code" : "require RazerHydra;
+
+dfgEntry {
+  result = this.getMaxBases();
+}
+"
   }

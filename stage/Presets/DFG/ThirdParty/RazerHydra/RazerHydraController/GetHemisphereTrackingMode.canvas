@@ -39,5 +39,10 @@
     "RazerHydra" : "*"
     },
   "presetGUID" : "89F41E1EF8570D9A075CEB8CB78ADB05",
-  "code" : "require RazerHydra;\n\ndfgEntry {\n  result = this.getHemisphereTrackingMode(whichController, state);\n}\n"
+  "code" : "require RazerHydra;
+
+dfgEntry {
+  result = this.getHemisphereTrackingMode(whichController, state);
+}
+"
   }

@@ -53,5 +53,10 @@
     "RazerHydra" : "*"
     },
   "presetGUID" : "185DC337BDA32D54982EE7031CA59FBD",
-  "code" : "require RazerHydra;\n\ndfgEntry {\n  result = this.setFilterParams(nearRange, nearVal, farRange, farVal);\n}\n"
+  "code" : "require RazerHydra;
+
+dfgEntry {
+  result = this.setFilterParams(nearRange, nearVal, farRange, farVal);
+}
+"
   }

@@ -18,5 +18,10 @@
     "RazerHydra" : "*"
     },
   "presetGUID" : "D4F95F8E393FF5D4B761DE1973876117",
-  "code" : "require RazerHydra;\n\ndfgEntry {\n  result = RazerHydraController();\n}\n"
+  "code" : "require RazerHydra;
+
+dfgEntry {
+  result = RazerHydraController();
+}
+"
   }

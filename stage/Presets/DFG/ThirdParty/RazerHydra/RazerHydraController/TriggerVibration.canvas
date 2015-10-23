@@ -46,5 +46,10 @@
     "RazerHydra" : "*"
     },
   "presetGUID" : "A6A3B24DAF49C789AF35A728FE478B60",
-  "code" : "require RazerHydra;\n\ndfgEntry {\n  result = this.triggerVibration(controllerId, duration100ms, patternId);\n}\n"
+  "code" : "require RazerHydra;
+
+dfgEntry {
+  result = this.triggerVibration(controllerId, duration100ms, patternId);
+}
+"
   }
