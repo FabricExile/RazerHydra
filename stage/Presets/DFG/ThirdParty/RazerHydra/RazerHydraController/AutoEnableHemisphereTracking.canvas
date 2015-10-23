@@ -16,7 +16,7 @@
     {
       "objectType" : "Port",
       "nodePortType" : "Out",
-      "name" : "which_controller",
+      "name" : "whichController",
       "execPortType" : "In",
       "typeSpec" : "SInt32"
       },
@@ -35,7 +35,7 @@
   "code" : "require RazerHydra;
 
 dfgEntry {
-  result = this.autoEnableHemisphereTracking(which_controller);
+  result = this.autoEnableHemisphereTracking(whichController);
 }
 "
   }

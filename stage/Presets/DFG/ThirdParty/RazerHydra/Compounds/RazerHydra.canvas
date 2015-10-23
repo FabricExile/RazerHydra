@@ -5,6 +5,7 @@
     "uiGraphPan" : "{\n  \"x\" : 273.5127563476563,\n  \"y\" : -74.14134216308594\n  }"
     },
   "title" : "RazerHydra",
+  "presetGUID" : "FD930F8006CCEB13442E5D62A031E97E",
   "ports" : [
     {
       "objectType" : "Port",

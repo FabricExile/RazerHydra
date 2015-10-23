@@ -16,21 +16,21 @@
     {
       "objectType" : "Port",
       "nodePortType" : "Out",
-      "name" : "controller_id",
+      "name" : "controllerId",
       "execPortType" : "In",
       "typeSpec" : "SInt32"
       },
     {
       "objectType" : "Port",
       "nodePortType" : "Out",
-      "name" : "duration_100ms",
+      "name" : "duration100ms",
       "execPortType" : "In",
       "typeSpec" : "SInt32"
       },
     {
       "objectType" : "Port",
       "nodePortType" : "Out",
-      "name" : "pattern_id",
+      "name" : "patternId",
       "execPortType" : "In",
       "typeSpec" : "SInt32"
       },
@@ -49,7 +49,7 @@
   "code" : "require RazerHydra;
 
 dfgEntry {
-  result = this.triggerVibration(controller_id, duration_100ms, pattern_id);
+  result = this.triggerVibration(controllerId, duration100ms, patternId);
 }
 "
   }

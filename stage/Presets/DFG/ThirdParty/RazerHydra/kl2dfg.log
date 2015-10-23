@@ -9,8 +9,8 @@
 [FABRIC:MT] Registered extension {XBox:1.0.0} in directory: e:\exts\Xbox\stage\Exts
 [FABRIC:MT] Ignored extension {RazerHydra:1.0.0} in directory: stage\Exts
 [FABRIC:MT] IRCache: Not pruning since last prune was less than 24 hours ago
-[FABRIC:MT] Loaded extension Math in 132.202ms (cached)
-[FABRIC:MT] Loaded extension RazerHydra in 28.476ms (cached)
+[FABRIC:MT] Loaded extension Math in 131.770ms (cached)
+[FABRIC:MT] Loaded extension RazerHydra in 16.392ms (cached)
 Registered function 'RazerHydraController.RazerHydraController', 'RazerHydraController.RazerHydraController'.
 Registered function 'RazerHydraController.autoEnableHemisphereTracking', 'autoEnableHemisphereTracking'.
 Registered function 'RazerHydraController.getBaseColor', 'getBaseColor'.

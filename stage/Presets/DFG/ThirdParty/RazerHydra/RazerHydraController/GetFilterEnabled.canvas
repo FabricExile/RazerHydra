@@ -16,7 +16,7 @@
     {
       "objectType" : "Port",
       "nodePortType" : "IO",
-      "name" : "on_or_off",
+      "name" : "onOrOff",
       "execPortType" : "IO",
       "typeSpec" : "SInt32"
       },
@@ -35,7 +35,7 @@
   "code" : "require RazerHydra;
 
 dfgEntry {
-  result = this.getFilterEnabled(on_or_off);
+  result = this.getFilterEnabled(onOrOff);
 }
 "
   }

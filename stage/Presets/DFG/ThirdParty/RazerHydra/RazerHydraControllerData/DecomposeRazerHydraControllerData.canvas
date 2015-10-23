@@ -70,25 +70,22 @@
       },
     {
       "objectType" : "Port",
-      "metadata" : {
-        "uiColor" : "{\n  \"r\" : 249,\n  \"g\" : 157,\n  \"b\" : 28\n  }"
-        },
       "nodePortType" : "In",
-      "name" : "rot_mat",
+      "name" : "rotMat",
       "execPortType" : "Out",
       "typeSpec" : "Mat33"
       },
     {
       "objectType" : "Port",
       "nodePortType" : "In",
-      "name" : "joystick_x",
+      "name" : "joystickX",
       "execPortType" : "Out",
       "typeSpec" : "Float32"
       },
     {
       "objectType" : "Port",
       "nodePortType" : "In",
-      "name" : "joystick_y",
+      "name" : "joystickY",
       "execPortType" : "Out",
       "typeSpec" : "Float32"
       },
@@ -109,45 +106,42 @@
     {
       "objectType" : "Port",
       "nodePortType" : "In",
-      "name" : "sequence_number",
+      "name" : "sequenceNumber",
       "execPortType" : "Out",
       "typeSpec" : "UInt8"
       },
     {
       "objectType" : "Port",
-      "metadata" : {
-        "uiColor" : "{\n  \"r\" : 0,\n  \"g\" : 191,\n  \"b\" : 232\n  }"
-        },
       "nodePortType" : "In",
-      "name" : "rot_quat",
+      "name" : "rotQuat",
       "execPortType" : "Out",
       "typeSpec" : "Quat"
       },
     {
       "objectType" : "Port",
       "nodePortType" : "In",
-      "name" : "firmware_revision",
+      "name" : "firmwareRevision",
       "execPortType" : "Out",
       "typeSpec" : "UInt16"
       },
     {
       "objectType" : "Port",
       "nodePortType" : "In",
-      "name" : "hardware_revision",
+      "name" : "hardwareRevision",
       "execPortType" : "Out",
       "typeSpec" : "UInt16"
       },
     {
       "objectType" : "Port",
       "nodePortType" : "In",
-      "name" : "packet_type",
+      "name" : "packetType",
       "execPortType" : "Out",
       "typeSpec" : "UInt16"
       },
     {
       "objectType" : "Port",
       "nodePortType" : "In",
-      "name" : "magnetic_frequency",
+      "name" : "magneticFrequency",
       "execPortType" : "Out",
       "typeSpec" : "UInt16"
       },
@@ -161,28 +155,28 @@
     {
       "objectType" : "Port",
       "nodePortType" : "In",
-      "name" : "controller_index",
+      "name" : "controllerIndex",
       "execPortType" : "Out",
       "typeSpec" : "SInt32"
       },
     {
       "objectType" : "Port",
       "nodePortType" : "In",
-      "name" : "is_docked",
+      "name" : "isDocked",
       "execPortType" : "Out",
       "typeSpec" : "UInt8"
       },
     {
       "objectType" : "Port",
       "nodePortType" : "In",
-      "name" : "which_hand",
+      "name" : "whichHand",
       "execPortType" : "Out",
       "typeSpec" : "UInt8"
       },
     {
       "objectType" : "Port",
       "nodePortType" : "In",
-      "name" : "hemi_tracking_enabled",
+      "name" : "hemiTrackingEnabled",
       "execPortType" : "Out",
       "typeSpec" : "UInt8"
       }
@@ -195,22 +189,22 @@
 
 dfgEntry {
   pos = value.pos;
-  rot_mat = value.rot_mat;
-  joystick_x = value.joystick_x;
-  joystick_y = value.joystick_y;
+  rotMat = value.rot_mat;
+  joystickX = value.joystick_x;
+  joystickY = value.joystick_y;
   trigger = value.trigger;
   buttons = value.buttons;
-  sequence_number = value.sequence_number;
-  rot_quat = value.rot_quat;
-  firmware_revision = value.firmware_revision;
-  hardware_revision = value.hardware_revision;
-  packet_type = value.packet_type;
-  magnetic_frequency = value.magnetic_frequency;
+  sequenceNumber = value.sequence_number;
+  rotQuat = value.rot_quat;
+  firmwareRevision = value.firmware_revision;
+  hardwareRevision = value.hardware_revision;
+  packetType = value.packet_type;
+  magneticFrequency = value.magnetic_frequency;
   enabled = value.enabled;
-  controller_index = value.controller_index;
-  is_docked = value.is_docked;
-  which_hand = value.which_hand;
-  hemi_tracking_enabled = value.hemi_tracking_enabled;
+  controllerIndex = value.controller_index;
+  isDocked = value.is_docked;
+  whichHand = value.which_hand;
+  hemiTrackingEnabled = value.hemi_tracking_enabled;
 }
 "
   }
