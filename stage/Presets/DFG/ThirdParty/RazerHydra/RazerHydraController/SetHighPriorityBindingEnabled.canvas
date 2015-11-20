@@ -16,7 +16,7 @@
     {
       "objectType" : "Port",
       "nodePortType" : "Out",
-      "name" : "onOrOff",
+      "name" : "on_or_off",
       "execPortType" : "In",
       "typeSpec" : "SInt32"
       },
@@ -35,7 +35,7 @@
   "code" : "require RazerHydra;
 
 dfgEntry {
-  result = this.setHighPriorityBindingEnabled(onOrOff);
+  result = this.setHighPriorityBindingEnabled(on_or_off);
 }
 "
   }

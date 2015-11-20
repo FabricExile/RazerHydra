@@ -22,6 +22,9 @@
       },
     {
       "objectType" : "Port",
+      "metadata" : {
+        "uiColor" : "{\n  \"r\" : 249,\n  \"g\" : 157,\n  \"b\" : 28\n  }"
+        },
       "nodePortType" : "Out",
       "defaultValues" : {
         "Mat33" : {
@@ -42,7 +45,7 @@
             }
           }
         },
-      "name" : "rotMat",
+      "name" : "rot_mat",
       "execPortType" : "In",
       "typeSpec" : "Mat33"
       },
@@ -52,7 +55,7 @@
       "defaultValues" : {
         "Float32" : 0
         },
-      "name" : "joystickX",
+      "name" : "joystick_x",
       "execPortType" : "In",
       "typeSpec" : "Float32"
       },
@@ -62,7 +65,7 @@
       "defaultValues" : {
         "Float32" : 0
         },
-      "name" : "joystickY",
+      "name" : "joystick_y",
       "execPortType" : "In",
       "typeSpec" : "Float32"
       },
@@ -92,12 +95,15 @@
       "defaultValues" : {
         "UInt8" : 0
         },
-      "name" : "sequenceNumber",
+      "name" : "sequence_number",
       "execPortType" : "In",
       "typeSpec" : "UInt8"
       },
     {
       "objectType" : "Port",
+      "metadata" : {
+        "uiColor" : "{\n  \"r\" : 0,\n  \"g\" : 191,\n  \"b\" : 232\n  }"
+        },
       "nodePortType" : "Out",
       "defaultValues" : {
         "Quat" : {
@@ -109,7 +115,7 @@
           "w" : 1
           }
         },
-      "name" : "rotQuat",
+      "name" : "rot_quat",
       "execPortType" : "In",
       "typeSpec" : "Quat"
       },
@@ -119,7 +125,7 @@
       "defaultValues" : {
         "UInt16" : 0
         },
-      "name" : "firmwareRevision",
+      "name" : "firmware_revision",
       "execPortType" : "In",
       "typeSpec" : "UInt16"
       },
@@ -129,7 +135,7 @@
       "defaultValues" : {
         "UInt16" : 0
         },
-      "name" : "hardwareRevision",
+      "name" : "hardware_revision",
       "execPortType" : "In",
       "typeSpec" : "UInt16"
       },
@@ -139,7 +145,7 @@
       "defaultValues" : {
         "UInt16" : 0
         },
-      "name" : "packetType",
+      "name" : "packet_type",
       "execPortType" : "In",
       "typeSpec" : "UInt16"
       },
@@ -149,7 +155,7 @@
       "defaultValues" : {
         "UInt16" : 0
         },
-      "name" : "magneticFrequency",
+      "name" : "magnetic_frequency",
       "execPortType" : "In",
       "typeSpec" : "UInt16"
       },
@@ -169,7 +175,7 @@
       "defaultValues" : {
         "SInt32" : 0
         },
-      "name" : "controllerIndex",
+      "name" : "controller_index",
       "execPortType" : "In",
       "typeSpec" : "SInt32"
       },
@@ -179,7 +185,7 @@
       "defaultValues" : {
         "UInt8" : 0
         },
-      "name" : "isDocked",
+      "name" : "is_docked",
       "execPortType" : "In",
       "typeSpec" : "UInt8"
       },
@@ -189,7 +195,7 @@
       "defaultValues" : {
         "UInt8" : 0
         },
-      "name" : "whichHand",
+      "name" : "which_hand",
       "execPortType" : "In",
       "typeSpec" : "UInt8"
       },
@@ -199,7 +205,7 @@
       "defaultValues" : {
         "UInt8" : 0
         },
-      "name" : "hemiTrackingEnabled",
+      "name" : "hemi_tracking_enabled",
       "execPortType" : "In",
       "typeSpec" : "UInt8"
       },
@@ -219,22 +225,22 @@
 
 dfgEntry {
   result.pos = pos;
-  result.rot_mat = rotMat;
-  result.joystick_x = joystickX;
-  result.joystick_y = joystickY;
+  result.rot_mat = rot_mat;
+  result.joystick_x = joystick_x;
+  result.joystick_y = joystick_y;
   result.trigger = trigger;
   result.buttons = buttons;
-  result.sequence_number = sequenceNumber;
-  result.rot_quat = rotQuat;
-  result.firmware_revision = firmwareRevision;
-  result.hardware_revision = hardwareRevision;
-  result.packet_type = packetType;
-  result.magnetic_frequency = magneticFrequency;
+  result.sequence_number = sequence_number;
+  result.rot_quat = rot_quat;
+  result.firmware_revision = firmware_revision;
+  result.hardware_revision = hardware_revision;
+  result.packet_type = packet_type;
+  result.magnetic_frequency = magnetic_frequency;
   result.enabled = enabled;
-  result.controller_index = controllerIndex;
-  result.is_docked = isDocked;
-  result.which_hand = whichHand;
-  result.hemi_tracking_enabled = hemiTrackingEnabled;
+  result.controller_index = controller_index;
+  result.is_docked = is_docked;
+  result.which_hand = which_hand;
+  result.hemi_tracking_enabled = hemi_tracking_enabled;
 }
 "
   }

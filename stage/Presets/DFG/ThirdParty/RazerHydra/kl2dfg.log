@@ -1,16 +1,65 @@
 [FABRIC:MT] Fabric Engine version 2.1.0-alpha3
 [FABRIC:MT] Loading DFG presets from e:\zeuxis\stage\Windows\x86_64\Release\Presets\DFG
 [FABRIC:MT] Loading DFG presets from c:\Users\helge\Fabric\Presets
+[FABRIC:MT] Loading DFG presets from e:\exts\Midi\stage\Presets\DFG
 [FABRIC:MT] Loading DFG presets from e:\exts\RazerHydra\stage\Presets\DFG
 [FABRIC:MT] Loading DFG presets from e:\exts\Xbox\stage\Presets\DFG
+[FABRIC:MT] Loading DFG presets from e:\exts\Oculus\stage\Presets\DFG
+[FABRIC:MT] Loading DFG presets from e:\exts\OculusRTR\stage\Presets\DFG
+[FABRIC:MT] Loading DFG presets from e:\exts\Xsens\stage\Presets\DFG
+[FABRIC:MT] [AlembicWrapper] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\AlembicWrapper\DFG': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] [AlembicWrapper] Error(s) encountered, extension disabled
+[FABRIC:MT] [AlembicWrapper] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\AlembicWrapper\AlembicWrapper.fpm.json'
+[FABRIC:MT] [Animation] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Animation\DFG': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] [Animation] Error(s) encountered, extension disabled
+[FABRIC:MT] [Animation] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Animation\Animation.fpm.json'
+[FABRIC:MT] [Characters] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Characters\DFG': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] [Characters] Error(s) encountered, extension disabled
+[FABRIC:MT] [Characters] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Characters\Characters.fpm.json'
+[FABRIC:MT] [Containers] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Containers\DFG': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] [Containers] Error(s) encountered, extension disabled
+[FABRIC:MT] [Containers] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Containers\Containers.fpm.json'
+[FABRIC:MT] [FbxWrapper] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\FbxWrapper\DFG': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] [FbxWrapper] Error(s) encountered, extension disabled
+[FABRIC:MT] [FbxWrapper] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\FbxWrapper\FbxWrapper.fpm.json'
+[FABRIC:MT] [FileIO] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\FileIO\DFG': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] [FileIO] Error(s) encountered, extension disabled
+[FABRIC:MT] [FileIO] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\FileIO\FileIO.fpm.json'
+[FABRIC:MT] [Images] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Images\DFG': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] [Images] Error(s) encountered, extension disabled
+[FABRIC:MT] [Images] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Images\Images.fpm.json'
+[FABRIC:MT] [JSON] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\JSON\DFG': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] [JSON] Error(s) encountered, extension disabled
+[FABRIC:MT] [JSON] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\JSON\JSON.fpm.json'
+[FABRIC:MT] [Math] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Math\DFG': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] [Math] Error(s) encountered, extension disabled
+[FABRIC:MT] [Math] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Math\Math.fpm.json'
+[FABRIC:MT] [FabricOBJ] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\OBJ\DFG': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] [FabricOBJ] Error(s) encountered, extension disabled
+[FABRIC:MT] [FabricOBJ] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\OBJ\FabricOBJ.fpm.json'
+[FABRIC:MT] [OpenImageIO] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\OpenImageIO\DFG': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] [OpenImageIO] Error(s) encountered, extension disabled
+[FABRIC:MT] [OpenImageIO] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\OpenImageIO\OpenImageIO.fpm.json'
+[FABRIC:MT] [Parameters] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Parameters\DFG': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] [Parameters] Error(s) encountered, extension disabled
+[FABRIC:MT] [Parameters] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Parameters\Parameters.fpm.json'
+[FABRIC:MT] [Singletons] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Singletons\DFG': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] [Singletons] Error(s) encountered, extension disabled
+[FABRIC:MT] [Singletons] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Singletons\Singletons.fpm.json'
 [FABRIC:MT] Registered extensions {Adaptors:1.0.0,Alembic:1.0.0,AlembicToSceneGraph:1.0.0,AlembicWrapper:1.3.0,Animation:1.1.0,Bullet:1.0.1,BulletHelpers:1.0.0,Characters:1.1.0,Containers:1.1.0,DFGHelpers,FabricInterfaces:1.0.1,FabricSynchronization:1.1.0,Fbx:1.1.0,FbxToSceneGraph:1.0.0,FbxWrapper,FileIO:1.2.0,Geometry:1.2.0,Images:1.0.2,Images2:1.0.0,InlineDrawing:1.2.0,JSON:1.0.0,Manipulation:1.1.0,Math:1.2.0,FabricOBJ:1.1.0,OGLWrappers:1.0.0,FabricOGL:1.0.0,OpenImageIO:1.0.2,OSOGL:1.1.0,Parameters:1.0.0,RTR2:1.0.0,SceneAssembly:1.0.0,SceneGraph:1.0.0,SceneGraphForCanvas:1.0.0,SceneGraphToRTR:1.0.0,SceneGraphWrappers:1.0.0,SceneHub:2.0.0,Singletons:1.1.0,FabricStatistics:1.1.0,Strokes:1.0.0,Util:1.1.0,ImageProcessing,RTR,RTRAdaptors} in directory: e:\zeuxis\stage\Windows\x86_64\Release\Exts
 [FABRIC:MT] Registered extensions {BadCode:2.1.0,BadInline:2.1.0,BadPrototype:2.1.0,BadVersion:2.1.0,CircularA:2.1.0,CircularB:2.1.0,FwdDeclare:2.1.0,FwdDeclNoDef:2.1.0,SetupCallback:2.1.0,UnitTest:2.1.0,VersionTest:1.0.0,VersionTest:1.1.1,VersionTest:1.2.1} in directory: e:\zeuxis\stage\Windows\x86_64\Release\Tests\Core\Exts
+[FABRIC:MT] Ignored extension directory 'e:\zeuxis\stage\Windows\x86_64\Release\Tests\Exts': unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Tests\Exts': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] Registered extension {Midi:1.0.0} in directory: e:\exts\Midi\stage\Exts
 [FABRIC:MT] Registered extension {RazerHydra:1.0.0} in directory: e:\exts\RazerHydra\stage\Exts
 [FABRIC:MT] Registered extension {XBox:1.0.0} in directory: e:\exts\Xbox\stage\Exts
+[FABRIC:MT] Registered extension {Oculus:1.0.0} in directory: e:\exts\Oculus\stage\Exts
+[FABRIC:MT] Registered extension {OculusRTR:1.0.0} in directory: e:\exts\OculusRTR\stage\Exts
+[FABRIC:MT] Registered extension {Xsens:1.0.0} in directory: e:\exts\Xsens\stage\Exts
+[FABRIC:MT] Registered extension {RhinoFBXConverter:1.0.0} in directory: e:\exts\RhinoFBXConverter\src
 [FABRIC:MT] Ignored extension {RazerHydra:1.0.0} in directory: stage\Exts
 [FABRIC:MT] IRCache: Not pruning since last prune was less than 24 hours ago
-[FABRIC:MT] Loaded extension Math in 131.770ms (cached)
-[FABRIC:MT] Loaded extension RazerHydra in 16.392ms (cached)
+[FABRIC:MT] Loaded extension Math in 137.148ms (cached)
+[FABRIC:MT] Loaded extension RazerHydra in 15.580ms (cached)
 Registered function 'RazerHydraController.RazerHydraController', 'RazerHydraController.RazerHydraController'.
 Registered function 'RazerHydraController.autoEnableHemisphereTracking', 'autoEnableHemisphereTracking'.
 Registered function 'RazerHydraController.getBaseColor', 'getBaseColor'.
