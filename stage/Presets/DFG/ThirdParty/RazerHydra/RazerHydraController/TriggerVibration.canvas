@@ -2,7 +2,7 @@
 {
   "objectType" : "Func",
   "metadata" : {
-    "uiTooltip" : "\n\n Supported by RazerHydraController"
+    "uiTooltip" : "Supported types:\n  this: RazerHydraController\n  controller_id: SInt32\n  duration_100ms: SInt32\n  pattern_id: SInt32\n  result: Boolean\n"
     },
   "title" : "TriggerVibration",
   "ports" : [

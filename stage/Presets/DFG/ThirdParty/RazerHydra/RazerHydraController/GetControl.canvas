@@ -2,7 +2,7 @@
 {
   "objectType" : "Func",
   "metadata" : {
-    "uiTooltip" : "\n\n Supported by RazerHydraController"
+    "uiTooltip" : "Supported types:\n  this: RazerHydraController\n  index: UInt8\n  result: RazerHydraControllerData\n"
     },
   "title" : "GetControl",
   "ports" : [

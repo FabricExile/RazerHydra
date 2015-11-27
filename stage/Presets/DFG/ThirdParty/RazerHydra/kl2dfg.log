@@ -1,87 +1,154 @@
-[FABRIC:MT] Fabric Engine version 2.1.0-alpha3
+[FABRIC:MT] Fabric Engine version 2.0.1
 [FABRIC:MT] Loading DFG presets from e:\zeuxis\stage\Windows\x86_64\Release\Presets\DFG
+[FABRIC:MT] Loading DFG presets from e:\zeuxis\Test\Canvas\Presets
 [FABRIC:MT] Loading DFG presets from c:\Users\helge\Fabric\Presets
 [FABRIC:MT] Loading DFG presets from e:\exts\Midi\stage\Presets\DFG
 [FABRIC:MT] Loading DFG presets from e:\exts\RazerHydra\stage\Presets\DFG
 [FABRIC:MT] Loading DFG presets from e:\exts\Xbox\stage\Presets\DFG
+[FABRIC:MT] Loading DFG presets from e:\exts\LeapMotion\stage\Presets\DFG
 [FABRIC:MT] Loading DFG presets from e:\exts\Oculus\stage\Presets\DFG
 [FABRIC:MT] Loading DFG presets from e:\exts\OculusRTR\stage\Presets\DFG
-[FABRIC:MT] Loading DFG presets from e:\exts\Xsens\stage\Presets\DFG
-[FABRIC:MT] [AlembicWrapper] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\AlembicWrapper\DFG': The system cannot find the path specified. (code 3 [0x3])
-[FABRIC:MT] [AlembicWrapper] Error(s) encountered, extension disabled
-[FABRIC:MT] [AlembicWrapper] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\AlembicWrapper\AlembicWrapper.fpm.json'
-[FABRIC:MT] [Animation] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Animation\DFG': The system cannot find the path specified. (code 3 [0x3])
-[FABRIC:MT] [Animation] Error(s) encountered, extension disabled
-[FABRIC:MT] [Animation] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Animation\Animation.fpm.json'
-[FABRIC:MT] [Characters] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Characters\DFG': The system cannot find the path specified. (code 3 [0x3])
-[FABRIC:MT] [Characters] Error(s) encountered, extension disabled
-[FABRIC:MT] [Characters] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Characters\Characters.fpm.json'
-[FABRIC:MT] [Containers] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Containers\DFG': The system cannot find the path specified. (code 3 [0x3])
-[FABRIC:MT] [Containers] Error(s) encountered, extension disabled
-[FABRIC:MT] [Containers] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Containers\Containers.fpm.json'
-[FABRIC:MT] [FbxWrapper] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\FbxWrapper\DFG': The system cannot find the path specified. (code 3 [0x3])
-[FABRIC:MT] [FbxWrapper] Error(s) encountered, extension disabled
-[FABRIC:MT] [FbxWrapper] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\FbxWrapper\FbxWrapper.fpm.json'
-[FABRIC:MT] [FileIO] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\FileIO\DFG': The system cannot find the path specified. (code 3 [0x3])
-[FABRIC:MT] [FileIO] Error(s) encountered, extension disabled
-[FABRIC:MT] [FileIO] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\FileIO\FileIO.fpm.json'
-[FABRIC:MT] [Images] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Images\DFG': The system cannot find the path specified. (code 3 [0x3])
-[FABRIC:MT] [Images] Error(s) encountered, extension disabled
-[FABRIC:MT] [Images] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Images\Images.fpm.json'
-[FABRIC:MT] [JSON] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\JSON\DFG': The system cannot find the path specified. (code 3 [0x3])
-[FABRIC:MT] [JSON] Error(s) encountered, extension disabled
-[FABRIC:MT] [JSON] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\JSON\JSON.fpm.json'
-[FABRIC:MT] [Math] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Math\DFG': The system cannot find the path specified. (code 3 [0x3])
-[FABRIC:MT] [Math] Error(s) encountered, extension disabled
-[FABRIC:MT] [Math] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Math\Math.fpm.json'
-[FABRIC:MT] [FabricOBJ] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\OBJ\DFG': The system cannot find the path specified. (code 3 [0x3])
-[FABRIC:MT] [FabricOBJ] Error(s) encountered, extension disabled
-[FABRIC:MT] [FabricOBJ] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\OBJ\FabricOBJ.fpm.json'
-[FABRIC:MT] [OpenImageIO] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\OpenImageIO\DFG': The system cannot find the path specified. (code 3 [0x3])
-[FABRIC:MT] [OpenImageIO] Error(s) encountered, extension disabled
-[FABRIC:MT] [OpenImageIO] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\OpenImageIO\OpenImageIO.fpm.json'
-[FABRIC:MT] [Parameters] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Parameters\DFG': The system cannot find the path specified. (code 3 [0x3])
-[FABRIC:MT] [Parameters] Error(s) encountered, extension disabled
-[FABRIC:MT] [Parameters] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Parameters\Parameters.fpm.json'
-[FABRIC:MT] [Singletons] Error registering extension: unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Singletons\DFG': The system cannot find the path specified. (code 3 [0x3])
-[FABRIC:MT] [Singletons] Error(s) encountered, extension disabled
-[FABRIC:MT] [Singletons] Extension manifest is 'e:\zeuxis\stage\Windows\x86_64\Release\Exts\Builtin\Singletons\Singletons.fpm.json'
+[FABRIC:MT] Loading DFG presets from e:\exts\XsensMvn\stage\Presets\DFG
+[FABRIC:MT] Loading DFG presets from e:\exts\XsensMt\stage\Presets\DFG
+[FABRIC:MT] DFG preset directory 'e:\exts\XsensMt\stage\Presets\DFG': unable to open directory 'e:\exts\XsensMt\stage\Presets\DFG': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] Loading DFG presets from e:\exts\RhinoFBXConverter\stage\Presets\DFG
 [FABRIC:MT] Registered extensions {Adaptors:1.0.0,Alembic:1.0.0,AlembicToSceneGraph:1.0.0,AlembicWrapper:1.3.0,Animation:1.1.0,Bullet:1.0.1,BulletHelpers:1.0.0,Characters:1.1.0,Containers:1.1.0,DFGHelpers,FabricInterfaces:1.0.1,FabricSynchronization:1.1.0,Fbx:1.1.0,FbxToSceneGraph:1.0.0,FbxWrapper,FileIO:1.2.0,Geometry:1.2.0,Images:1.0.2,Images2:1.0.0,InlineDrawing:1.2.0,JSON:1.0.0,Manipulation:1.1.0,Math:1.2.0,FabricOBJ:1.1.0,OGLWrappers:1.0.0,FabricOGL:1.0.0,OpenImageIO:1.0.2,OSOGL:1.1.0,Parameters:1.0.0,RTR2:1.0.0,SceneAssembly:1.0.0,SceneGraph:1.0.0,SceneGraphForCanvas:1.0.0,SceneGraphToRTR:1.0.0,SceneGraphWrappers:1.0.0,SceneHub:2.0.0,Singletons:1.1.0,FabricStatistics:1.1.0,Strokes:1.0.0,Util:1.1.0,ImageProcessing,RTR,RTRAdaptors} in directory: e:\zeuxis\stage\Windows\x86_64\Release\Exts
-[FABRIC:MT] Registered extensions {BadCode:2.1.0,BadInline:2.1.0,BadPrototype:2.1.0,BadVersion:2.1.0,CircularA:2.1.0,CircularB:2.1.0,FwdDeclare:2.1.0,FwdDeclNoDef:2.1.0,SetupCallback:2.1.0,UnitTest:2.1.0,VersionTest:1.0.0,VersionTest:1.1.1,VersionTest:1.2.1} in directory: e:\zeuxis\stage\Windows\x86_64\Release\Tests\Core\Exts
-[FABRIC:MT] Ignored extension directory 'e:\zeuxis\stage\Windows\x86_64\Release\Tests\Exts': unable to open directory 'e:\zeuxis\stage\Windows\x86_64\Release\Tests\Exts': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] Registered extensions {BadCode:2.0.1,BadInline:2.0.1,BadPrototype:2.0.1,BadVersion:2.0.1,CircularA:2.0.1,CircularB:2.0.1,FwdDeclare:2.0.1,FwdDeclNoDef:2.0.1,SetupCallback:2.0.1,UnitTest:2.0.1,VersionTest:1.0.0,VersionTest:1.1.1,VersionTest:1.2.1} in directory: e:\zeuxis\stage\Windows\x86_64\Release\Tests\Core\Exts
 [FABRIC:MT] Registered extension {Midi:1.0.0} in directory: e:\exts\Midi\stage\Exts
 [FABRIC:MT] Registered extension {RazerHydra:1.0.0} in directory: e:\exts\RazerHydra\stage\Exts
 [FABRIC:MT] Registered extension {XBox:1.0.0} in directory: e:\exts\Xbox\stage\Exts
+[FABRIC:MT] Registered extension {LeapMotion:1.0.0} in directory: e:\exts\LeapMotion\stage\Exts
 [FABRIC:MT] Registered extension {Oculus:1.0.0} in directory: e:\exts\Oculus\stage\Exts
 [FABRIC:MT] Registered extension {OculusRTR:1.0.0} in directory: e:\exts\OculusRTR\stage\Exts
-[FABRIC:MT] Registered extension {Xsens:1.0.0} in directory: e:\exts\Xsens\stage\Exts
-[FABRIC:MT] Registered extension {RhinoFBXConverter:1.0.0} in directory: e:\exts\RhinoFBXConverter\src
+[FABRIC:MT] Registered extension {XsensMvn:1.0.0} in directory: e:\exts\XsensMvn\stage\Exts
+[FABRIC:MT] Ignored extension directory 'e:\exts\XsensMt\stage\Exts': unable to open directory 'e:\exts\XsensMt\stage\Exts': The system cannot find the path specified. (code 3 [0x3])
+[FABRIC:MT] Registered extension {RhinoFBXConverter:1.0.0} in directory: e:\exts\RhinoFBXConverter\stage\Exts
 [FABRIC:MT] Ignored extension {RazerHydra:1.0.0} in directory: stage\Exts
 [FABRIC:MT] IRCache: Not pruning since last prune was less than 24 hours ago
-[FABRIC:MT] Loaded extension Math in 137.148ms (cached)
-[FABRIC:MT] Loaded extension RazerHydra in 15.580ms (cached)
-Registered function 'RazerHydraController.RazerHydraController', 'RazerHydraController.RazerHydraController'.
-Registered function 'RazerHydraController.autoEnableHemisphereTracking', 'autoEnableHemisphereTracking'.
-Registered function 'RazerHydraController.getBaseColor', 'getBaseColor'.
-Registered function 'RazerHydraController.getControl', 'getControl'.
-Registered function 'RazerHydraController.getFilterEnabled', 'getFilterEnabled'.
-Registered function 'RazerHydraController.getFilterParams', 'getFilterParams'.
-Registered function 'RazerHydraController.getHemisphereTrackingMode', 'getHemisphereTrackingMode'.
-Registered function 'RazerHydraController.getHighPriorityBindingEnabled', 'getHighPriorityBindingEnabled'.
-Registered function 'RazerHydraController.getHistorySize', 'getHistorySize'.
-Registered function 'RazerHydraController.getMaxBases', 'getMaxBases'.
-Registered function 'RazerHydraController.getMaxControllers', 'getMaxControllers'.
-Registered function 'RazerHydraController.getNumActiveControllers', 'getNumActiveControllers'.
-Registered function 'RazerHydraController.isBaseConnected', 'isBaseConnected'.
-Registered function 'RazerHydraController.isControllerEnabled', 'isControllerEnabled'.
-Registered function 'RazerHydraController.readyForMotion', 'readyForMotion'.
-Registered function 'RazerHydraController.setActiveBase', 'setActiveBase'.
-Registered function 'RazerHydraController.setBaseColor', 'setBaseColor'.
-Registered function 'RazerHydraController.setFilterEnabled', 'setFilterEnabled'.
-Registered function 'RazerHydraController.setFilterParams', 'setFilterParams'.
-Registered function 'RazerHydraController.setHemisphereTrackingMode', 'setHemisphereTrackingMode'.
-Registered function 'RazerHydraController.setHighPriorityBindingEnabled', 'setHighPriorityBindingEnabled'.
-Registered function 'RazerHydraController.triggerVibration', 'triggerVibration'.
-Registered function 'RazerHydraController.update', 'update'.
-Registered function 'RazerHydraController.valid', 'valid'.
-Registered function 'RazerHydraController.~RazerHydraController', '~RazerHydraController'.
+[FABRIC:MT] Loaded extension Math in 129.220ms (cached)
+[FABRIC:MT] Loaded extension RazerHydra in 14.422ms (cached)
+registerFunction: thisType='RazerHydraController' func='function RazerHydraController?()'
+  Added to bin[normal][RazerHydraController]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.autoEnableHemisphereTracking?( in SInt32 which_controller )'
+  Added to bin[normal][Boolean RazerHydraController.autoEnableHemisphereTracking]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.getBaseColor?( io UInt8 red, io UInt8 green, io UInt8 blue )'
+  Added to bin[normal][Boolean RazerHydraController.getBaseColor]
+registerFunction: thisType='RazerHydraController' func='function RazerHydraControllerData RazerHydraController.getControl?( in UInt8 index )'
+  Added to bin[normal][RazerHydraControllerData RazerHydraController.getControl]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.getFilterEnabled?( io SInt32 on_or_off )'
+  Added to bin[normal][Boolean RazerHydraController.getFilterEnabled]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.getFilterParams?( io Float32 near_range, io Float32 near_val, io Float32 far_range, io Float32 far_val )'
+  Added to bin[normal][Boolean RazerHydraController.getFilterParams]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.getHemisphereTrackingMode?( in SInt32 which_controller, io SInt32 state )'
+  Added to bin[normal][Boolean RazerHydraController.getHemisphereTrackingMode]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.getHighPriorityBindingEnabled?( io SInt32 on_or_off )'
+  Added to bin[normal][Boolean RazerHydraController.getHighPriorityBindingEnabled]
+registerFunction: thisType='RazerHydraController' func='function SInt32 RazerHydraController.getHistorySize?()'
+  Added to bin[normal][SInt32 RazerHydraController.getHistorySize]
+registerFunction: thisType='RazerHydraController' func='function SInt32 RazerHydraController.getMaxBases?()'
+  Added to bin[normal][SInt32 RazerHydraController.getMaxBases]
+registerFunction: thisType='RazerHydraController' func='function SInt32 RazerHydraController.getMaxControllers?()'
+  Added to bin[normal][SInt32 RazerHydraController.getMaxControllers]
+registerFunction: thisType='RazerHydraController' func='function SInt32 RazerHydraController.getNumActiveControllers?()'
+  Added to bin[normal][SInt32 RazerHydraController.getNumActiveControllers]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.isBaseConnected?( in SInt32 i )'
+  Added to bin[normal][Boolean RazerHydraController.isBaseConnected]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.isControllerEnabled?( in SInt32 which )'
+  Added to bin[normal][Boolean RazerHydraController.isControllerEnabled]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.readyForMotion?()'
+  Added to bin[normal][Boolean RazerHydraController.readyForMotion]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.setActiveBase?( in SInt32 i )'
+  Added to bin[normal][Boolean RazerHydraController.setActiveBase]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.setBaseColor?( in UInt8 red, in UInt8 green, in UInt8 blue )'
+  Added to bin[normal][Boolean RazerHydraController.setBaseColor]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.setFilterEnabled?( in SInt32 on_or_off )'
+  Added to bin[normal][Boolean RazerHydraController.setFilterEnabled]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.setFilterParams?( in Float32 near_range, in Float32 near_val, in Float32 far_range, in Float32 far_val )'
+  Added to bin[normal][Boolean RazerHydraController.setFilterParams]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.setHemisphereTrackingMode?( in SInt32 which_controller, in SInt32 state )'
+  Added to bin[normal][Boolean RazerHydraController.setHemisphereTrackingMode]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.setHighPriorityBindingEnabled?( in SInt32 on_or_off )'
+  Added to bin[normal][Boolean RazerHydraController.setHighPriorityBindingEnabled]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.triggerVibration?( in SInt32 controller_id, in SInt32 duration_100ms, in SInt32 pattern_id )'
+  Added to bin[normal][Boolean RazerHydraController.triggerVibration]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.update?()'
+  Added to bin[normal][Boolean RazerHydraController.update]
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.valid?()'
+  Added to bin[normal][Boolean RazerHydraController.valid]
+registerFunction: thisType='RazerHydraController' func='function ~RazerHydraController()'
+  Added to bin[normal][RazerHydraController.~RazerHydraController]
+registerFunction: thisType='RazerHydraController' func='function RazerHydraController?()'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.valid?()'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.readyForMotion?()'
+registerFunction: thisType='RazerHydraController' func='function SInt32 RazerHydraController.getMaxBases?()'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.setActiveBase?( in SInt32 i )'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.isBaseConnected?( in SInt32 i )'
+registerFunction: thisType='RazerHydraController' func='function SInt32 RazerHydraController.getMaxControllers?()'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.isControllerEnabled?( in SInt32 which )'
+registerFunction: thisType='RazerHydraController' func='function SInt32 RazerHydraController.getNumActiveControllers?()'
+registerFunction: thisType='RazerHydraController' func='function SInt32 RazerHydraController.getHistorySize?()'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.update?()'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.setHemisphereTrackingMode?( in SInt32 which_controller, in SInt32 state )'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.getHemisphereTrackingMode?( in SInt32 which_controller, io SInt32 state )'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.autoEnableHemisphereTracking?( in SInt32 which_controller )'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.setHighPriorityBindingEnabled?( in SInt32 on_or_off )'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.getHighPriorityBindingEnabled?( io SInt32 on_or_off )'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.triggerVibration?( in SInt32 controller_id, in SInt32 duration_100ms, in SInt32 pattern_id )'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.setFilterEnabled?( in SInt32 on_or_off )'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.getFilterEnabled?( io SInt32 on_or_off )'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.setFilterParams?( in Float32 near_range, in Float32 near_val, in Float32 far_range, in Float32 far_val )'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.getFilterParams?( io Float32 near_range, io Float32 near_val, io Float32 far_range, io Float32 far_val )'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.setBaseColor?( in UInt8 red, in UInt8 green, in UInt8 blue )'
+registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.getBaseColor?( io UInt8 red, io UInt8 green, io UInt8 blue )'
+registerFunction: thisType='RazerHydraController' func='function RazerHydraControllerData RazerHydraController.getControl?( in UInt8 index )'
+processFunctions
+  bin[normal][RazerHydraController][0] (asArray=false)
+    thisType='RazerHydraController' code='function RazerHydraController?()'
+  bin[normal][Boolean RazerHydraController.autoEnableHemisphereTracking][1] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.autoEnableHemisphereTracking?( in SInt32 which_controller )'
+  bin[normal][Boolean RazerHydraController.getBaseColor][3] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.getBaseColor?( io UInt8 red, io UInt8 green, io UInt8 blue )'
+  bin[normal][RazerHydraControllerData RazerHydraController.getControl][1] (asArray=false)
+    thisType='RazerHydraController' code='function RazerHydraControllerData RazerHydraController.getControl?( in UInt8 index )'
+  bin[normal][Boolean RazerHydraController.getFilterEnabled][1] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.getFilterEnabled?( io SInt32 on_or_off )'
+  bin[normal][Boolean RazerHydraController.getFilterParams][4] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.getFilterParams?( io Float32 near_range, io Float32 near_val, io Float32 far_range, io Float32 far_val )'
+  bin[normal][Boolean RazerHydraController.getHemisphereTrackingMode][2] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.getHemisphereTrackingMode?( in SInt32 which_controller, io SInt32 state )'
+  bin[normal][Boolean RazerHydraController.getHighPriorityBindingEnabled][1] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.getHighPriorityBindingEnabled?( io SInt32 on_or_off )'
+  bin[normal][SInt32 RazerHydraController.getHistorySize][0] (asArray=false)
+    thisType='RazerHydraController' code='function SInt32 RazerHydraController.getHistorySize?()'
+  bin[normal][SInt32 RazerHydraController.getMaxBases][0] (asArray=false)
+    thisType='RazerHydraController' code='function SInt32 RazerHydraController.getMaxBases?()'
+  bin[normal][SInt32 RazerHydraController.getMaxControllers][0] (asArray=false)
+    thisType='RazerHydraController' code='function SInt32 RazerHydraController.getMaxControllers?()'
+  bin[normal][SInt32 RazerHydraController.getNumActiveControllers][0] (asArray=false)
+    thisType='RazerHydraController' code='function SInt32 RazerHydraController.getNumActiveControllers?()'
+  bin[normal][Boolean RazerHydraController.isBaseConnected][1] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.isBaseConnected?( in SInt32 i )'
+  bin[normal][Boolean RazerHydraController.isControllerEnabled][1] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.isControllerEnabled?( in SInt32 which )'
+  bin[normal][Boolean RazerHydraController.readyForMotion][0] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.readyForMotion?()'
+  bin[normal][Boolean RazerHydraController.setActiveBase][1] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.setActiveBase?( in SInt32 i )'
+  bin[normal][Boolean RazerHydraController.setBaseColor][3] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.setBaseColor?( in UInt8 red, in UInt8 green, in UInt8 blue )'
+  bin[normal][Boolean RazerHydraController.setFilterEnabled][1] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.setFilterEnabled?( in SInt32 on_or_off )'
+  bin[normal][Boolean RazerHydraController.setFilterParams][4] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.setFilterParams?( in Float32 near_range, in Float32 near_val, in Float32 far_range, in Float32 far_val )'
+  bin[normal][Boolean RazerHydraController.setHemisphereTrackingMode][2] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.setHemisphereTrackingMode?( in SInt32 which_controller, in SInt32 state )'
+  bin[normal][Boolean RazerHydraController.setHighPriorityBindingEnabled][1] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.setHighPriorityBindingEnabled?( in SInt32 on_or_off )'
+  bin[normal][Boolean RazerHydraController.triggerVibration][3] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.triggerVibration?( in SInt32 controller_id, in SInt32 duration_100ms, in SInt32 pattern_id )'
+  bin[normal][Boolean RazerHydraController.update][0] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.update?()'
+  bin[normal][Boolean RazerHydraController.valid][0] (asArray=false)
+    thisType='RazerHydraController' code='function Boolean RazerHydraController.valid?()'
+  bin[normal][RazerHydraController.~RazerHydraController][0] (asArray=false)
+    Skipping bin: destructor

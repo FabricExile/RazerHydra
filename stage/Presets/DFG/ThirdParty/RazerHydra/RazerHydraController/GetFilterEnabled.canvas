@@ -2,7 +2,7 @@
 {
   "objectType" : "Func",
   "metadata" : {
-    "uiTooltip" : "\n\n Supported by RazerHydraController"
+    "uiTooltip" : "Supported types:\n  this: RazerHydraController\n  on_or_off: SInt32\n  result: Boolean\n"
     },
   "title" : "GetFilterEnabled",
   "ports" : [
