@@ -9,8 +9,6 @@
 [FABRIC:MT] Loading DFG presets from e:\exts\Oculus\stage\Presets\DFG
 [FABRIC:MT] Loading DFG presets from e:\exts\OculusRTR\stage\Presets\DFG
 [FABRIC:MT] Loading DFG presets from e:\exts\XsensMvn\stage\Presets\DFG
-[FABRIC:MT] Loading DFG presets from e:\exts\XsensMt\stage\Presets\DFG
-[FABRIC:MT] DFG preset directory 'e:\exts\XsensMt\stage\Presets\DFG': unable to open directory 'e:\exts\XsensMt\stage\Presets\DFG': The system cannot find the path specified. (code 3 [0x3])
 [FABRIC:MT] Loading DFG presets from e:\exts\RhinoFBXConverter\stage\Presets\DFG
 [FABRIC:MT] Registered extensions {Adaptors:1.0.0,Alembic:1.0.0,AlembicToSceneGraph:1.0.0,AlembicWrapper:1.3.0,Animation:1.1.0,Bullet:1.0.1,BulletHelpers:1.0.0,Characters:1.1.0,Containers:1.1.0,DFGHelpers,FabricInterfaces:1.0.1,FabricSynchronization:1.1.0,Fbx:1.1.0,FbxToSceneGraph:1.0.0,FbxWrapper,FileIO:1.2.0,Geometry:1.2.0,Images:1.0.2,Images2:1.0.0,InlineDrawing:1.2.0,JSON:1.0.0,Manipulation:1.1.0,Math:1.2.0,FabricOBJ:1.1.0,OGLWrappers:1.0.0,FabricOGL:1.0.0,OpenImageIO:1.0.2,OSOGL:1.1.0,Parameters:1.0.0,RTR2:1.0.0,SceneAssembly:1.0.0,SceneGraph:1.0.0,SceneGraphForCanvas:1.0.0,SceneGraphToRTR:1.0.0,SceneGraphWrappers:1.0.0,SceneHub:2.0.0,Singletons:1.1.0,FabricStatistics:1.1.0,Strokes:1.0.0,Util:1.1.0,ImageProcessing,RTR,RTRAdaptors} in directory: e:\zeuxis\stage\Windows\x86_64\Release\Exts
 [FABRIC:MT] Registered extensions {BadCode:2.0.1,BadInline:2.0.1,BadPrototype:2.0.1,BadVersion:2.0.1,CircularA:2.0.1,CircularB:2.0.1,FwdDeclare:2.0.1,FwdDeclNoDef:2.0.1,SetupCallback:2.0.1,UnitTest:2.0.1,VersionTest:1.0.0,VersionTest:1.1.1,VersionTest:1.2.1} in directory: e:\zeuxis\stage\Windows\x86_64\Release\Tests\Core\Exts
@@ -21,12 +19,11 @@
 [FABRIC:MT] Registered extension {Oculus:1.0.0} in directory: e:\exts\Oculus\stage\Exts
 [FABRIC:MT] Registered extension {OculusRTR:1.0.0} in directory: e:\exts\OculusRTR\stage\Exts
 [FABRIC:MT] Registered extension {XsensMvn:1.0.0} in directory: e:\exts\XsensMvn\stage\Exts
-[FABRIC:MT] Ignored extension directory 'e:\exts\XsensMt\stage\Exts': unable to open directory 'e:\exts\XsensMt\stage\Exts': The system cannot find the path specified. (code 3 [0x3])
 [FABRIC:MT] Registered extension {RhinoFBXConverter:1.0.0} in directory: e:\exts\RhinoFBXConverter\stage\Exts
 [FABRIC:MT] Ignored extension {RazerHydra:1.0.0} in directory: stage\Exts
 [FABRIC:MT] IRCache: Not pruning since last prune was less than 24 hours ago
-[FABRIC:MT] Loaded extension Math in 129.220ms (cached)
-[FABRIC:MT] Loaded extension RazerHydra in 14.422ms (cached)
+[FABRIC:MT] Loaded extension Math in 1898.043ms (first time)
+[FABRIC:MT] Loaded extension RazerHydra in 165.367ms (first time)
 registerFunction: thisType='RazerHydraController' func='function RazerHydraController?()'
   Added to bin[normal][RazerHydraController]
 registerFunction: thisType='RazerHydraController' func='function Boolean RazerHydraController.autoEnableHemisphereTracking?( in SInt32 which_controller )'
