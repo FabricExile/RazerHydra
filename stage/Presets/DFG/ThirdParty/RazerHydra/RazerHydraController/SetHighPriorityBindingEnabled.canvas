@@ -32,10 +32,5 @@
     "RazerHydra" : "*"
     },
   "presetGUID" : "BA88227BA07E4B409836CD18F126E84D",
-  "code" : "require RazerHydra;
-
-dfgEntry {
-  result = this.setHighPriorityBindingEnabled(onOrOff);
-}
-"
+  "code" : "require RazerHydra;\n\ndfgEntry {\n  result = this.setHighPriorityBindingEnabled(onOrOff);\n}\n"
   }

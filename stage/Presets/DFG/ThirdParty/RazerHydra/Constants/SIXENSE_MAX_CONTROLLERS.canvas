@@ -15,10 +15,5 @@
     "RazerHydra" : "*"
     },
   "presetGUID" : "F10D6ADD0618036C82738E4ACC1644A1",
-  "code" : "require RazerHydra;
-
-dfgEntry {
-  value = SIXENSE_MAX_CONTROLLERS;
-}
-"
+  "code" : "require RazerHydra;\n\ndfgEntry {\n  value = SIXENSE_MAX_CONTROLLERS;\n}\n"
   }

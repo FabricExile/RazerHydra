@@ -215,26 +215,5 @@
     "RazerHydra" : "*"
     },
   "presetGUID" : "FB62139CFE643AEC418FC0B028574A8C",
-  "code" : "require RazerHydra;
-
-dfgEntry {
-  result.pos = pos;
-  result.rot_mat = rotMat;
-  result.joystick_x = joystickX;
-  result.joystick_y = joystickY;
-  result.trigger = trigger;
-  result.buttons = buttons;
-  result.sequence_number = sequenceNumber;
-  result.rot_quat = rotQuat;
-  result.firmware_revision = firmwareRevision;
-  result.hardware_revision = hardwareRevision;
-  result.packet_type = packetType;
-  result.magnetic_frequency = magneticFrequency;
-  result.enabled = enabled;
-  result.controller_index = controllerIndex;
-  result.is_docked = isDocked;
-  result.which_hand = whichHand;
-  result.hemi_tracking_enabled = hemiTrackingEnabled;
-}
-"
+  "code" : "require RazerHydra;\n\ndfgEntry {\n  result.pos = pos;\n  result.rot_mat = rotMat;\n  result.joystick_x = joystickX;\n  result.joystick_y = joystickY;\n  result.trigger = trigger;\n  result.buttons = buttons;\n  result.sequence_number = sequenceNumber;\n  result.rot_quat = rotQuat;\n  result.firmware_revision = firmwareRevision;\n  result.hardware_revision = hardwareRevision;\n  result.packet_type = packetType;\n  result.magnetic_frequency = magneticFrequency;\n  result.enabled = enabled;\n  result.controller_index = controllerIndex;\n  result.is_docked = isDocked;\n  result.which_hand = whichHand;\n  result.hemi_tracking_enabled = hemiTrackingEnabled;\n}\n"
   }

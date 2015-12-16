@@ -15,10 +15,5 @@
     "RazerHydra" : "*"
     },
   "presetGUID" : "F0EA4CA7623881FD6550A0CE5C3277B1",
-  "code" : "require RazerHydra;
-
-dfgEntry {
-  value = SIXENSE_BUTTON_2;
-}
-"
+  "code" : "require RazerHydra;\n\ndfgEntry {\n  value = SIXENSE_BUTTON_2;\n}\n"
   }

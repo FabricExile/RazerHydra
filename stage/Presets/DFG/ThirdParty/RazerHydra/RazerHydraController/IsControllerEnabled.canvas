@@ -32,10 +32,5 @@
     "RazerHydra" : "*"
     },
   "presetGUID" : "475FABD074244B3FE6765878B30FD0EF",
-  "code" : "require RazerHydra;
-
-dfgEntry {
-  result = this.isControllerEnabled(which);
-}
-"
+  "code" : "require RazerHydra;\n\ndfgEntry {\n  result = this.isControllerEnabled(which);\n}\n"
   }

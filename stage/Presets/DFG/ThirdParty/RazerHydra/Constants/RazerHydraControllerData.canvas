@@ -66,7 +66,5 @@
     "RazerHydra" : "*"
     },
   "presetGUID" : "BA9F7160D12E506DA3FEB6231CA058EA",
-  "code" : "dfgEntry {
-}
-"
+  "code" : "dfgEntry {\n}\n"
   }
